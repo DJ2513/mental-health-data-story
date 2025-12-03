@@ -1,0 +1,13 @@
+title: "Mental Health Data Story"
+description: "An exploratory data narrative using three datasets."
+theme: just-the-docs
+
+# Enable navigation structure
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+just_the_docs:
+  color_scheme: "light"
+
+url: "https://dj2513.github.io/mental-health-data-story"
