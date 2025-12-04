@@ -15,14 +15,18 @@ And finally, a **cross-dataset comparison**.
 
 Use the sidebar to navigate through the story.
 
-## Mental Health Map
+## 🧠 Mental Health (Depression + Anxiety)
 
-<iframe src="assets/maps/world_mh.html" width="100%" height="600px"></iframe>
+<iframe src="assets/maps/world_mh_real.html" width="100%" height="600px"></iframe>
 
-## Gym Culture Map
+---
+
+## 🏋️ Gym Culture Index
 
 <iframe src="assets/maps/world_gym.html" width="100%" height="600px"></iframe>
 
-## Social Media use Map
+---
+
+## 📱 Social Media Usage Index
 
 <iframe src="assets/maps/world_social.html" width="100%" height="600px"></iframe>
