@@ -1,4 +1,3 @@
-import time
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -18,7 +17,6 @@ data, showing how the burden of depressive disorders has changed worldwide.
 
 # Include the global animation
 st.header("📈 Global Depression Trend (1990–2021) — Animated")
-iframe_key = str(time.time())
 
 df = pd.read_csv("assets/data/years.csv")
 
@@ -94,7 +92,7 @@ fig.update_layout(
                 {
                     "label": "▶ Play",
                     "method": "animate",
-                    "args": [None, dict(frame=dict(duration=3), transition=dict(duration=5))]
+                    "args": [None, dict(frame=dict(duration=20), transition=dict(duration=20))]
                 },
                 {
                     "label": "⏸ Pause",
