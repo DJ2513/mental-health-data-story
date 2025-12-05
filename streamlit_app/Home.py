@@ -7,19 +7,6 @@ st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown("""
 <style>
-/* Hide the sidebar completely */
-[data-testid="stSidebar"] {
-    display: none;
-}
-
-/* Make main page full width */
-[data-testid="stAppViewContainer"] {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-/* Header bar styling */
 .navbar {
     display: flex;
     justify-content: center;
@@ -28,7 +15,6 @@ st.markdown("""
     border-radius: 8px;
     margin-bottom: 30px;
 }
-
 .navbar a {
     color: white !important;
     margin: 0 25px;
@@ -36,7 +22,6 @@ st.markdown("""
     font-size: 18px;
     font-weight: 600;
 }
-
 .navbar a:hover {
     color: #FFD500 !important;
     text-decoration: underline;
@@ -44,28 +29,14 @@ st.markdown("""
 </style>
 
 <div class="navbar">
-    <a href="?page=Home">Home</a>
-    <a href="?page=Music">Music</a>
-    <a href="?page=Gym">Gym</a>
-    <a href="?page=Social">Social</a>
-    <a href="?page=WorldMaps">Global Maps</a>
-    <a href="?page=Comparison">Comparison</a>
+    <a href="/">Home</a>
+    <a href="/Music">Music</a>
+    <a href="/Gym">Gym</a>
+    <a href="/Social">Social</a>
+    <a href="/WorldMaps">Global Maps</a>
+    <a href="/Comparison">Comparison</a>
 </div>
 """, unsafe_allow_html=True)
-
-query_params = st.experimental_get_query_params()
-page = query_params.get("page", ["Home"])[0]
-
-if page == "Music":
-    st.switch_page("pages/Music.py")
-elif page == "Gym":
-    st.switch_page("pages/Gym.py")
-elif page == "Social":
-    st.switch_page("pages/Social.py")
-elif page == "WorldMaps":
-    st.switch_page("pages/WorldMaps.py")
-elif page == "Comparison":
-    st.switch_page("pages/Comparison.py")
 
 st.title("🌍 Mental Health Data Story")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
