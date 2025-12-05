@@ -7,7 +7,7 @@ st.markdown("""
 This section examines how social media usage — particularly daily screen time — connects to mental health outcomes.
 """)
 
-sm = pd.read_csv("assets/data/social_media.csv")
+sm = pd.read_csv("assets/data/social.csv")
 
 st.subheader("📊 Correlation Heatmap")
 st.image("assets/images/social_corr.png")
