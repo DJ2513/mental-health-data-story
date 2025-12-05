@@ -5,14 +5,19 @@ import plotly.graph_objects as go
 import base64
 from pathlib import Path
 
+
 def svg_to_base64(svg_path):
     path = Path(__file__).parent / svg_path
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
+
 svg_data = svg_to_base64("assets/mental_health.svg")
 people_data = svg_to_base64("assets/people.svg")
+
+
 st.set_page_config(page_title="Mental Health Story", layout="wide")
+
 
 st.markdown(f"""
     <div style="
@@ -29,83 +34,111 @@ st.markdown(f"""
     unsafe_allow_html=True
 )
 
+
 st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 html, body, [data-testid="stAppViewContainer"] {
     background-color: #fbf2e8 !important;
-}
-
-/* Headings */
-h1, h2, h3 {
-    color: #000000 !important;
-    font-weight: 600 !important;
-}
-
-/* General text */
-p, li, div {
+    font-family: 'Open Sans', sans-serif;
     color: #727272 !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+p, div, span, li {
+    font-family: 'Open Sans', sans-serif !important;
     font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+    color: #727272 !important;
+}
+
+/* Hero block */
+.hero {
+    background-color: #607aa2;
+    padding: 60px 50px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    color: white !important;
+}
+.hero h1, .hero p {
+    color: white !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+/* Section headers */
+.section-header {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    font-family: 'Lato', sans-serif !important;
+    color: #000000 !important;
+    margin-top: 60px !important;
+    margin-bottom: 25px !important;
 }
 
 /* Cards */
 .card {
-    padding: 30px;
     background-color: #ffffff;
+    padding: 35px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-    margin-bottom: 40px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    margin: 25px 0;
 }
 
-/* Hero Block */
-.hero {
-    padding: 60px 40px;
-    border-radius: 30px;
-    background-color: #607aa2;
-    color: white !important;
-    margin-bottom: 50px;
+/* Story layout */
+.story-block {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 60px 0;
+}
+.story-block img {
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
+.story-block-reverse {
+    flex-direction: row-reverse;
 }
 
-/* Hero text override */
-.hero h1, .hero p {
-    color: white !important;
-}
-
-/* Section Header */
-.section-header {
-    font-size: 2rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: #000000 !important;
-    font-weight: 700;
-}
-
-/* Rounded image blocks (for charts and photos) */
 .rounded-image {
     border-radius: 25px;
-    overflow: hidden;
     margin-bottom: 30px;
+}
+
+.center {
+    text-align: center;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-st.title("Global Mental Health Insights")
-st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
+st.markdown("""
+<div class="hero">
+    <h1>Global Mental Health Insights</h1>
+    <p>A multi-dataset exploration of modern wellbeing across the world.</p>
+</div>
+""", unsafe_allow_html=True)
+
 
 st.markdown("""
-Mental health is a fundamental component of human well-being. It shapes how we think, feel, and act — 
-influencing our relationships, productivity, and overall quality of life. Yet, despite its importance, 
-mental health remains misunderstood and unevenly addressed across the world.
+Mental health is a fundamental component of human well-being. It shapes how individuals think, feel, and act, 
+influencing relationships, productivity, and overall quality of life. Yet despite its importance, mental health 
+remains unevenly supported and widely misunderstood across the world.
 
-Today, millions struggle with stress, anxiety, depression, and emotional instability. These conditions 
-emerge from complex interactions between personal habits, social environments, and cultural behaviors.  
-Understanding these influences is essential for building healthier societies.
+Millions experience stress, depression, anxiety, and emotional instability. These conditions arise from complex 
+interactions between personal habits, social structures, and cultural environments. Understanding these influences 
+is essential for developing healthier societies.
 
-This project explores mental health through **three global datasets**, each offering insights into a 
-different dimension of modern well-being:
+This project examines mental health through three global datasets, each offering insight into a different dimension of wellbeing:
 """)
+
 
 col1, col2, col3 = st.columns(3)
 
@@ -113,7 +146,7 @@ with col1:
     st.markdown("""
     <div class="card">
         <h3>Happiness & Life Satisfaction</h3>
-        <p>Insights from the World Happiness Report reveal social, economic, and emotional conditions influencing global well-being.</p>
+        <p>Emotional and social wellbeing indicators that reveal how people across the world experience life satisfaction.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -121,7 +154,7 @@ with col2:
     st.markdown("""
     <div class="card">
         <h3>Music, Mood & Behavior</h3>
-        <p>Music affects emotional states and reflects broader cultural trends. Analyzing global listening patterns uncovers surprising mood correlations.</p>
+        <p>How listening patterns reflect and influence emotional states, energy levels, and mood variations across regions.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -129,23 +162,21 @@ with col3:
     st.markdown("""
     <div class="card">
         <h3>Global Suicide Rates</h3>
-        <p>One of the most severe indicators of mental distress. Mapping suicide data reveals vulnerable regions and risk factors.</p>
+        <p>One of the most significant indicators of mental distress. Mapping these data reveals vulnerable demographics and regions.</p>
     </div>
     """, unsafe_allow_html=True)
 
 
-st.markdown("---")
-
-
-st.header("Global Depression Trend (1990–2021) — Animated")
+st.markdown("""
+<div class="section-header">Global Depression Trend (1990–2021)</div>
+""", unsafe_allow_html=True)
 
 st.markdown("""
-Below is a 30-year animation built using **IHME Global Burden of Disease (GBD)** data, illustrating 
-how the burden of depressive disorders has evolved globally. It represents the rate of **Years Lived 
-with Disability (YLDs)** attributed to depressive disorders.
+This 30-year animation, built using IHME Global Burden of Disease data, illustrates how the burden of depressive 
+disorders has evolved globally. It reflects the rate of Years Lived with Disability (YLDs) attributed to depression.
 """)
 
-# Load data
+
 df = pd.read_csv("assets/data/years.csv")
 
 df_filtered = df[
@@ -160,7 +191,6 @@ df_filtered = df[
 years = df_filtered["year"].to_numpy()
 rates = df_filtered["val"].to_numpy()
 
-# Smooth line for animation
 smooth_years = np.linspace(years.min(), years.max(), len(years) * 3)
 smooth_rates = np.interp(smooth_years, years, rates)
 
@@ -206,9 +236,9 @@ fig.update_layout(
     updatemenus=[{
         "type": "buttons",
         "buttons": [
-            {"label": "▶ Play", "method": "animate",
+            {"label": "Play", "method": "animate",
              "args": [None, dict(frame=dict(duration=40), transition=dict(duration=50))]},
-            {"label": "⏸ Pause", "method": "animate",
+            {"label": "Pause", "method": "animate",
              "args": [[None], dict(frame=dict(duration=0))]}
         ],
         "x": 0.1, "y": -0.15
@@ -217,46 +247,40 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown("---")
 
-st.header("Global Interactive Maps")
 st.markdown("""
-These interactive maps help illustrate how different lifestyle and environmental factors relate to 
-mental health around the world. By visualizing global patterns, we can better understand where risk 
-factors are concentrated — and where protective behaviors may be more common.
+<div class="section-header">Global Interactive Maps</div>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+These maps illustrate global patterns related to mental health, physical activity, and digital behavior. 
+They provide a geographic perspective on factors that influence emotional wellbeing.
 """)
+
 
 st.subheader("Mental Health Map")
 st.markdown("""
-This map visualizes global mental health burden indicators.  
-It provides a high-level view of how depressive disorders, anxiety, and related conditions vary across regions.  
-Higher values indicate a greater prevalence or impact of mental health challenges.
+This map visualizes global mental health burden indicators, offering insight into how depressive 
+and anxiety disorders are distributed across regions.
 """)
-
 mh_html = open("assets/maps/world_mh_real.html", "r").read()
 st.components.v1.html(mh_html, height=400)
 
+
 st.subheader("Gym Culture Index Map")
 st.markdown("""
-Physical activity is one of the strongest protective factors for mental well-being.  
-This map represents the **Gym Culture Index**, reflecting how active different countries are in terms 
-of exercise habits, gym attendance, and fitness engagement.
-
-Countries with stronger fitness cultures often show better mental health outcomes.
+This map represents the Gym Culture Index, reflecting how active different populations are in terms of 
+exercise habits and fitness engagement.
 """)
-
 gym_html = open("assets/maps/world_gym.html", "r").read()
 st.components.v1.html(gym_html, height=400)
 
+
 st.subheader("Social Media Use Map")
 st.markdown("""
-Social media can influence mental health both positively and negatively.  
-High usage may correlate with increased connectivity — but also with stress, comparison, 
-loneliness, or digital overload.
-
-This map shows how intensively each country uses social media platforms, offering insights into 
-countries where digital behavior may impact mental well-being the most.
+This map displays global social media engagement, offering insight into digital behaviors that may 
+positively or negatively influence mental wellbeing.
 """)
-
 sm_html = open("assets/maps/world_social.html", "r").read()
 st.components.v1.html(sm_html, height=400)
