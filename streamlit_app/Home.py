@@ -338,3 +338,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    st.page_link("pages/Gym.py", label="Next: Gym Activity →")
