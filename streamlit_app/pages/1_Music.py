@@ -15,6 +15,9 @@ music = pd.read_csv("assets/data/music.csv")
 st.subheader("📊 Correlation Heatmap")
 st.image("assets/images/music_corr.png")
 
+st.subheader("Favorite Genre vs Mental Health Score")
+st.image("assets/images/music_box_favgenre.png")
+
 st.subheader("Scatter: Hours per Day vs Mental Health Score")
 st.image("assets/images/music_scatter_hours.png")
 
