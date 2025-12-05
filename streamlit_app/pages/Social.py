@@ -77,9 +77,12 @@ st.markdown('<div class="section-header">Daily Screen Time</div>', unsafe_allow_
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    Daily hours spent on social media can strongly influence stress, attention, and emotional balance.  
-    This visualization shows how screen time relates to mental health scores.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Daily hours spent on social media can strongly influence stress, attention, and emotional balance.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/social_scatter_screentime.png", use_container_width=True)
 
@@ -91,9 +94,12 @@ with col1:
     st.image("assets/images/social_platform_box.png", use_container_width=True)
 with col2:
     st.markdown("""
-    Different platforms encourage different patterns of interaction.  
-    This comparison shows how mental health scores differ across users of various social platforms.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Different platforms encourage different digital behaviors, which can influence wellbeing differently.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 st.markdown('<div class="section-header">Sleep Quality and Digital Behavior</div>', unsafe_allow_html=True)
@@ -101,20 +107,11 @@ st.markdown('<div class="section-header">Sleep Quality and Digital Behavior</div
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    Sleep disruption is one of the most consistent consequences of heavy screen time.  
-    This visualization examines how sleep quality decreases as social media use increases.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Sleep disruption is one of the most consistent consequences of excessive screen time.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/social_sleep_scatter.png", use_container_width=True)
-
-
-st.markdown("""
-<div class="card">
-    <h3>Key Takeaway</h3>
-    <p>
-    Social media use can enrich communication and provide entertainment, but heavy engagement may disrupt sleep, 
-    reduce focus, and increase emotional strain.  
-    Balancing digital habits is essential for supporting healthy mental wellbeing.
-    </p>
-</div>
-""", unsafe_allow_html=True)

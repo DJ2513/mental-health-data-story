@@ -77,10 +77,13 @@ st.markdown('<div class="section-header">Genre Preference and Emotional Wellbein
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    Different genres evoke different emotional responses.  
-    This visualization examines how individuals across the dataset score in mental health 
-    depending on their preferred music genre.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Different genres evoke different emotional responses.  
+        This visualization examines how mental health scores vary across preferred genres.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/music_box_favgenre.png", use_container_width=True)
 
@@ -92,9 +95,12 @@ with col1:
     st.image("assets/images/music_scatter_hours.png", use_container_width=True)
 with col2:
     st.markdown("""
-    Listening for long periods may reflect emotional needs, coping strategies, or deep engagement.  
-    This visualization explores how hours spent listening relate to overall mental health scores.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Listening for long periods may reflect emotional needs, coping strategies, or deep engagement.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 st.markdown('<div class="section-header">Depression Indicators</div>', unsafe_allow_html=True)
@@ -102,44 +108,11 @@ st.markdown('<div class="section-header">Depression Indicators</div>', unsafe_al
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    This chart explores the connection between self-reported depression symptoms and mental health scores.  
-    It helps reveal whether depressive tendencies align with noticeable drops in wellbeing metrics.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        This chart explores the connection between depression indicators and overall mental health scores.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/music_depression_scatter.png", use_container_width=True)
-
-
-st.markdown('<div class="section-header">Anxiety Indicators</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.image("assets/images/music_anxiety_scatter.png", use_container_width=True)
-with col2:
-    st.markdown("""
-    Anxiety can strongly influence listening choices and emotional regulation.  
-    This visualization shows how anxiety levels relate to mental health outcomes.
-    """)
-
-
-st.markdown('<div class="section-header">Insomnia and Wellbeing</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown("""
-    Sleep quality is deeply tied to emotional regulation.  
-    This visualization compares insomnia severity with overall mental health scores.
-    """)
-with col2:
-    st.image("assets/images/music_insomnia_scatter.png", use_container_width=True)
-
-
-st.markdown("""
-<div class="card">
-    <h3>Key Takeaway</h3>
-    <p>
-    Music is more than entertainment — it is a mirror of emotional life.  
-    Listening habits can reflect stress, emotional instability, or coping patterns.  
-    When used intentionally, music can support better mental health outcomes.
-    </p>
-</div>
-""", unsafe_allow_html=True)

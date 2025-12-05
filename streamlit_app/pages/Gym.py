@@ -77,9 +77,13 @@ st.markdown('<div class="section-header">Workout Frequency & Emotional Wellbeing
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    Working out more consistently often leads to better emotional balance and lower levels of stress.  
-    This visualization examines how the **number of weekly workouts** correlates with mental health scores.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Working out more consistently often leads to better emotional balance and lower levels of stress.  
+        This visualization examines how the number of weekly workouts correlates with mental health scores.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/gym_freq_scatter.png", use_container_width=True)
 
@@ -91,10 +95,13 @@ with col1:
     st.image("assets/images/gym_calories_scatter.png", use_container_width=True)
 with col2:
     st.markdown("""
-    Calories burned represent **workout intensity**, which can influence neurotransmitter release  
-    (endorphins, dopamine, serotonin).  
-    Higher-intensity workouts often create a measurable boost in mood and cognitive clarity.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Calories burned represent workout intensity, which can influence neurotransmitter release  
+        such as endorphins, dopamine, and serotonin.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 st.markdown('<div class="section-header">How Long You Work Out Matters</div>', unsafe_allow_html=True)
@@ -102,33 +109,12 @@ st.markdown('<div class="section-header">How Long You Work Out Matters</div>', u
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
-    Session duration helps us understand how sustained effort contributes to total energy expenditure.  
-    Longer sessions may correlate with deeper mental health benefits due to prolonged physical engagement.
-    """)
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Session duration helps us understand how sustained effort contributes to total energy expenditure.  
+        Longer sessions may correlate with deeper mental health benefits.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/gym_duration_calories_scatter.png", use_container_width=True)
-
-
-st.markdown('<div class="section-header">Consistency vs Session Length</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.image("assets/images/gym_duration_freq_scatter.png", use_container_width=True)
-with col2:
-    st.markdown("""
-    Do frequent gym-goers tend to have longer or shorter sessions?  
-    Understanding these behavior patterns helps contextualize which habits contribute most 
-    effectively to mental wellbeing.
-    """)
-
-
-st.markdown("""
-<div class="card">
-    <h3>Key Takeaway</h3>
-    <p>
-    Regardless of whether the focus is on duration, frequency, or intensity,  
-    <strong>physical activity consistently supports better mental health outcomes.</strong>  
-    Even modest, regular exercise can deliver significant psychological benefits.
-    </p>
-</div>
-""", unsafe_allow_html=True)
