@@ -3,6 +3,10 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
+with st.sidebar:
+    st.title("Navigation")
+    st.markdown("Use the menu above to explore the datasets.")
+
 st.title("🌍 Mental Health Data Story")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
 
