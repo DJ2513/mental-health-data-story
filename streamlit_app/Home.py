@@ -18,7 +18,7 @@ data, showing how the burden of depressive disorders has changed worldwide.
 st.header("📈 Global Depression Trend (1990–2021) — Animated")
 iframe_key = str(time.time())
 
-with open("assets/animations/global_depression_timeseries_TURBO.html", "r", encoding="utf-8") as f:
+with open("assets/animations/global_depression_timeseries_TURBO_OPT.html", "r", encoding="utf-8") as f:
     html_data = f.read()
 
 components.html(html_data, height=600, scrolling=False, key=iframe_key)
