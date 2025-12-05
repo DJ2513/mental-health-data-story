@@ -34,24 +34,31 @@ st.markdown(f"""
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
 <style>
 
-span[data-baseweb="icon"] {
-    font-family: 'Material Symbols Outlined' !important;
-}
-
+/* GLOBAL BACKGROUND + DEFAULT FONT */
 html, body, [data-testid="stAppViewContainer"] {
     background-color: #fbf2e8 !important;
     font-family: 'Open Sans', sans-serif;
     color: #727272 !important;
 }
 
+span[data-baseweb="icon"] {
+    font-family: "Material Symbols Outlined" !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+/* HEADERS */
 h1, h2, h3, h4 {
     font-family: 'Lato', sans-serif !important;
     color: #000000 !important;
     font-weight: 700 !important;
+    letter-spacing: -0.5px;
 }
 
+/* GENERAL TEXT */
 p, div, span, li {
     font-family: 'Open Sans', sans-serif !important;
     font-size: 1.15rem !important;
@@ -59,7 +66,7 @@ p, div, span, li {
     color: #727272 !important;
 }
 
-/* Hero block */
+/* HERO BLOCK */
 .hero {
     background-color: #607aa2;
     padding: 60px 50px;
@@ -72,7 +79,7 @@ p, div, span, li {
     font-family: 'Lato', sans-serif !important;
 }
 
-/* Section headers */
+/* SECTION HEADERS */
 .section-header {
     font-size: 2.2rem !important;
     font-weight: 700 !important;
@@ -82,7 +89,7 @@ p, div, span, li {
     margin-bottom: 25px !important;
 }
 
-/* Cards */
+/* CARDS */
 .card {
     background-color: #ffffff;
     padding: 35px;
@@ -91,7 +98,7 @@ p, div, span, li {
     margin: 25px 0;
 }
 
-/* Story layout */
+/* HORIZONTAL STORY BLOCKS */
 .story-block {
     display: flex;
     gap: 40px;
@@ -102,15 +109,20 @@ p, div, span, li {
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.10);
 }
+
+/* REVERSE LAYOUT */
 .story-block-reverse {
     flex-direction: row-reverse;
 }
 
+/* ROUNDED IMAGE BLOCKS (e.g., charts, maps) */
 .rounded-image {
     border-radius: 25px;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
+/* CENTER ALIGN */
 .center {
     text-align: center;
 }
