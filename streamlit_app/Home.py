@@ -9,22 +9,9 @@ def svg_to_base64(svg_path):
     path = Path(__file__).parent / svg_path
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
-    
-def remove_svg_background(svg_string):
-    # Removes common background rectangles and styles
-    svg_string = svg_string.replace('fill="#ffffff"', 'fill="none"')
-    svg_string = svg_string.replace('fill="#FFFFFF"', 'fill="none"')
-    svg_string = svg_string.replace('fill="white"', 'fill="none"')
-    svg_string = svg_string.replace('style="background:#ffffff"', '')
-    svg_string = svg_string.replace('style="background:white"', '')
-    return svg_string
 
-svg_data_raw = svg_to_base64("assets/mental_health.svg")
-people_data_raw = svg_to_base64("assets/people.svg")
-
-svg_data = remove_svg_background(base64.b64decode(svg_data_raw).decode())
-people_data = remove_svg_background(base64.b64decode(people_data_raw).decode())
-
+svg_data = svg_to_base64("assets/mental_health.svg")
+people_data = svg_to_base64("assets/people.svg")
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown(f"""
