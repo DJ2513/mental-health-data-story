@@ -16,7 +16,8 @@ data, showing how the burden of depressive disorders has changed worldwide.
 """)
 
 # Include the global animation
-st.header("📈 Global Depression Trend (1990–2021) — Animated")
+st.subheader("📈 Global Depression Trend (1990–2021) — Animated")
+
 
 df = pd.read_csv("assets/data/years.csv")
 
@@ -108,7 +109,7 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.title("🌍 Global Interactive Maps")
+st.header("🌍 Global Interactive Maps")
 
 st.markdown("These maps illustrate worldwide patterns relating to mental health, gym culture, and social media use.")
 
