@@ -32,9 +32,6 @@ st.markdown(f"""
 
 
 st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
 <style>
 
 /* GLOBAL BACKGROUND + DEFAULT FONT */
@@ -42,12 +39,6 @@ html, body, [data-testid="stAppViewContainer"] {
     background-color: #fbf2e8 !important;
     font-family: 'Open Sans', sans-serif;
     color: #727272 !important;
-}
-
-span[data-baseweb="icon"] {
-    font-family: "Material Symbols Outlined" !important;
-    font-weight: normal !important;
-    font-style: normal !important;
 }
 
 /* HEADERS */
