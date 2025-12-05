@@ -5,19 +5,15 @@ import plotly.graph_objects as go
 import base64
 from pathlib import Path
 
-
 def svg_to_base64(svg_path):
     path = Path(__file__).parent / svg_path
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-
 svg_data = svg_to_base64("assets/mental_health.svg")
 people_data = svg_to_base64("assets/people.svg")
 
-
 st.set_page_config(page_title="Mental Health Story", layout="wide")
-
 
 st.markdown(f"""
     <div style="
@@ -39,6 +35,10 @@ st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+span[data-baseweb="icon"] {
+    font-family: 'Material Symbols Outlined' !important;
+}
 
 html, body, [data-testid="stAppViewContainer"] {
     background-color: #fbf2e8 !important;
