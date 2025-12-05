@@ -320,3 +320,26 @@ with col1:
 with col2:
     sm_html = open("assets/maps/world_social.html", "r").read()
     st.components.v1.html(sm_html, height=350)
+
+st.markdown("""
+<div class="card">
+    <h3>Key Takeaway</h3>
+    <p>
+    Mental health is shaped by a wide range of interconnected factors — emotional life satisfaction, 
+    daily habits, physical activity, digital behavior, and global social environments.  
+    No single dataset can explain wellbeing, but together, these perspectives reveal meaningful patterns 
+    that help us understand and support mental health more holistically.
+    </p>
+
+    <p>
+    We invite you to continue exploring the remaining sections of this project.  
+    Each chapter highlights a different dimension of modern wellbeing and offers insights into how 
+    everyday choices, cultural trends, and global conditions influence the mind.
+    </p>
+
+    <p style="font-weight:600; color:#000000;">
+        Your journey through the data begins here — discover how the world shapes mental health, and how 
+        mental health, in turn, shapes the world.
+    </p>
+</div>
+""", unsafe_allow_html=True)
