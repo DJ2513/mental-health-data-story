@@ -124,4 +124,5 @@ with col1:
     st.page_link("Home.py", label="← Back to Home")
 
 with col2:
+    st.markdown("<div style='text-align:right;'>", unsafe_allow_html=True)
     st.page_link("pages/Music.py", label="Next: Music →")
