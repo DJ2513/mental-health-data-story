@@ -92,7 +92,7 @@ fig.update_layout(
                 {
                     "label": "▶ Play",
                     "method": "animate",
-                    "args": [None, dict(frame=dict(duration=20), transition=dict(duration=20))]
+                    "args": [None, dict(frame=dict(duration=40), transition=dict(duration=50))]
                 },
                 {
                     "label": "⏸ Pause",
