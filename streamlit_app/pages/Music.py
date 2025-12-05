@@ -5,24 +5,62 @@ st.title("🎧 Music & Mental Health")
 
 st.markdown("""
 <style>
-h1 {
-    font-size: 3rem !important;
-    font-weight: 700 !important;
+
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #fbf2e8 !important;
 }
-h2, h3 {
+
+/* Headings */
+h1, h2, h3 {
+    color: #000000 !important;
     font-weight: 600 !important;
 }
-p, li {
-    font-size: 1.1rem !important;
-    line-height: 1.6 !important;
+
+/* General text */
+p, li, div {
+    color: #727272 !important;
+    font-size: 1.15rem !important;
 }
+
+/* Cards */
 .card {
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    margin-bottom: 40px;
 }
+
+/* Hero Block */
+.hero {
+    padding: 60px 40px;
+    border-radius: 30px;
+    background-color: #607aa2;
+    color: white !important;
+    margin-bottom: 50px;
+}
+
+/* Hero text override */
+.hero h1, .hero p {
+    color: white !important;
+}
+
+/* Section Header */
+.section-header {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #000000 !important;
+    font-weight: 700;
+}
+
+/* Rounded image blocks (for charts and photos) */
+.rounded-image {
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 

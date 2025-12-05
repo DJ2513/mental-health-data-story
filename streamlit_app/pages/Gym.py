@@ -1,158 +1,134 @@
 import streamlit as st
 import pandas as pd
 
-st.title("🏋️ Gym Activity & Mental Health")
-
 st.markdown("""
 <style>
-h1 {
-    font-size: 3rem !important;
-    font-weight: 700 !important;
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #fbf2e8 !important;
 }
-h2, h3 {
-    font-weight: 600 !important;
+
+h1, h2, h3 {
+    color: #000000 !important;
 }
+
 p, li {
-    font-size: 1.1rem !important;
-    line-height: 1.6 !important;
+    color: #727272 !important;
+    font-size: 1.15rem !important;
+    line-height: 1.65;
 }
+
 .card {
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    margin-bottom: 40px;
 }
+
+.hero {
+    padding: 60px 40px;
+    border-radius: 30px;
+    background-color: #607aa2;
+    color: white !important;
+    margin-bottom: 50px;
+}
+
+.hero h1, .hero p {
+    color: white !important;
+}
+
+.section-header {
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown("""
-Physical activity is one of the most well-documented protective factors for mental health.  
-Exercise reduces stress, improves sleep, boosts mood, and increases emotional resilience.  
-In this section, we explore how **workout patterns** — including frequency, duration, and calories burned — 
-relate to overall mental health scores in our dataset.
-
-The goal is to understand which aspects of physical activity are most strongly associated with 
-better psychological wellbeing.
-""")
+<div class="hero">
+    <h1>Gym Activity & Mental Health</h1>
+    <p>
+    Regular physical activity is one of the most powerful predictors of positive mental wellbeing.  
+    In this section, we explore how the frequency, duration, and intensity of workouts shape 
+    emotional resilience and overall mental health.
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 gym = pd.read_csv("assets/data/gym.csv")
 
-st.markdown("---")
+st.markdown('<div class="section-header">Overall Relationships Between Exercise & Mental Health</div>', unsafe_allow_html=True)
 
-st.subheader("📊 Correlation Heatmap: How Does Exercise Relate to Mental Health?")
+with st.container():
+    st.markdown("""
+    The correlation heatmap summarizes how different aspects of gym activity relate to mental 
+    health scores. Strong positive relationships suggest that certain exercise habits have a measurable 
+    mental health benefit.
+    """)
 
-st.markdown("""
-This heatmap provides a high-level overview of how key gym-related behaviors correlate with mental health.  
-It includes relationships between:
+    st.image("assets/images/gym_corr.png", use_container_width=True)
 
-- **Workout frequency**  
-- **Session duration**  
-- **Calories burned**  
-- **Mental health score**
 
-Positive correlations suggest that increases in the gym variable are linked to improvements 
-in mental health.
-""")
+st.markdown('<div class="section-header">Workout Frequency & Emotional Wellbeing</div>', unsafe_allow_html=True)
 
-st.image("assets/images/gym_corr.png", caption="Correlation matrix of gym activity and mental health")
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    Working out more consistently often leads to better emotional balance and lower levels of stress.  
+    This visualization examines how the **number of weekly workouts** correlates with mental health scores.
+    """)
+with col2:
+    st.image("assets/images/gym_freq_scatter.png", use_container_width=True)
 
-st.markdown("""
-**Insight:**  
-We typically expect to see **positive correlations** between exercise habits and mental health.  
-If the heatmap shows strong values, it supports the idea that **consistent physical activity is linked 
-to better emotional wellbeing**.
-""")
 
-st.markdown("---")
+st.markdown('<div class="section-header">Exercise Intensity & Mood</div>', unsafe_allow_html=True)
 
-st.subheader("📈 Workout Frequency vs Mental Health Score")
+col1, col2 = st.columns([1,1])
+with col1:
+    st.image("assets/images/gym_calories_scatter.png", use_container_width=True)
+with col2:
+    st.markdown("""
+    Calories burned represent **workout intensity**, which can influence neurotransmitter release  
+    (endorphins, dopamine, serotonin).  
+    Higher-intensity workouts often create a measurable boost in mood and cognitive clarity.
+    """)
 
-st.markdown("""
-Does working out more often lead to a higher mental health score?  
-This scatterplot visualizes how the number of weekly workouts relates to emotional wellbeing.
 
-If a clear upward trend appears, it suggests that **regularity** — not just intensity — plays an important 
-role in sustaining mental wellness.
-""")
+st.markdown('<div class="section-header">How Long You Work Out Matters</div>', unsafe_allow_html=True)
 
-st.image("assets/images/gym_freq_scatter.png")
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    Session duration helps us understand how sustained effort contributes to total energy expenditure.  
+    Longer sessions may correlate with deeper mental health benefits due to prolonged physical engagement.
+    """)
+with col2:
+    st.image("assets/images/gym_duration_calories_scatter.png", use_container_width=True)
 
-st.markdown("""
-**Interpretation:**  
-A positive slope would indicate that individuals who exercise more frequently tend to report **better 
-mental health outcomes**, consistent with large-scale psychological and medical research.
-""")
 
-st.markdown("---")
+st.markdown('<div class="section-header">Consistency vs Session Length</div>', unsafe_allow_html=True)
 
-st.subheader("🔥 Calories Burned vs Mental Health Score")
+col1, col2 = st.columns([1,1])
+with col1:
+    st.image("assets/images/gym_duration_freq_scatter.png", use_container_width=True)
+with col2:
+    st.markdown("""
+    Do frequent gym-goers tend to have longer or shorter sessions?  
+    Understanding these behavior patterns helps contextualize which habits contribute most 
+    effectively to mental wellbeing.
+    """)
 
-st.markdown("""
-Calories burned act as a proxy for **exercise intensity**.  
-This visualization explores whether people who burn more energy during workouts report better 
-mental health.
-
-A meaningful relationship here would imply that **higher-effort sessions** may amplify the mental 
-health benefits of exercise.
-""")
-
-st.image("assets/images/gym_calories_scatter.png")
-
-st.markdown("""
-**Interpretation:**  
-If the graph shows a rising trend, it suggests that **greater physical exertion** contributes to 
-improved psychological wellbeing — possibly via endorphin release or stress reduction.
-""")
-
-st.markdown("---")
-
-st.subheader("⏱️ Session Duration vs Calories Burned")
 
 st.markdown("""
-This scatterplot looks at how workout **length** relates to total **calories burned**.  
-While this chart is more about exercise mechanics than mental health, it helps identify 
-whether participants maintain consistent energy output across shorter or longer sessions.
-
-Understanding this helps contextualize other mental health correlations.
-""")
-
-st.image("assets/images/gym_duration_calories_scatter.png")
-
-st.markdown("""
-**Insight:**  
-A linear relationship would indicate efficient workouts, while a scattered relationship suggests 
-high variability in workout styles or intensity.
-""")
-
-st.markdown("---")
-
-st.subheader("🔁 Session Duration vs Workout Frequency")
-
-st.markdown("""
-Do people who work out more often also tend to have longer sessions?  
-Or do frequent exercisers prefer shorter, more consistent routines?
-
-This visualization helps us understand **behavioral patterns** within gym activity.
-""")
-
-st.image("assets/images/gym_duration_freq_scatter.png")
-
-st.markdown("""
-**Interpretation:**  
-If the data shows no strong trend, it indicates that **frequency and duration are independent habits**, 
-each contributing differently to mental health.
-""")
-
-st.markdown("---")
-
-st.markdown("""
-### 🧠 Key Takeaway
-
-Across all visualizations, a clear theme emerges:  
-**Regular physical activity — whether frequent, intense, or sustained — tends to be strongly associated 
-with improved mental health.**
-
-This mirrors decades of scientific evidence showing that exercise is one of the most accessible and 
-effective tools for supporting emotional wellbeing.
-""")
+<div class="card">
+    <h3>Key Takeaway</h3>
+    <p>
+    Regardless of whether the focus is on duration, frequency, or intensity,  
+    <strong>physical activity consistently supports better mental health outcomes.</strong>  
+    Even modest, regular exercise can deliver significant psychological benefits.
+    </p>
+</div>
+""", unsafe_allow_html=True)
