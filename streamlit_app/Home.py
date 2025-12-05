@@ -2,18 +2,18 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
-import base64
 from pathlib import Path
+import base64
 
-def svg_to_base64(svg_path):
-    path = Path(__file__).parent / svg_path
+st.set_page_config(page_title="Mental Health Story", layout="wide")
+
+# PNG loader for consistent display
+def png_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-svg_data = svg_to_base64("assets/mental_health.svg")
-people_data = svg_to_base64("assets/people.svg")
-
-st.set_page_config(page_title="Mental Health Story", layout="wide")
+mental_png = png_to_base64("assets/mental_health.png")
+people_png = png_to_base64("assets/people.png")
 
 st.markdown(f"""
     <div style="
@@ -23,8 +23,8 @@ st.markdown(f"""
         padding: 20px 0;
         width: 100%;
     ">
-        <img src="data:image/svg+xml;base64,{svg_data}" width="420" />
-        <img src="data:image/svg+xml;base64,{people_data}" width="420" />
+        <img src="data:image/png;base64,{mental_png}" width="420" />
+        <img src="data:image/png;base64,{people_png}" width="420" />
     </div>
     """,
     unsafe_allow_html=True
