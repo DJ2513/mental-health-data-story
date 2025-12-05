@@ -3,14 +3,14 @@ title: "Music Dataset"
 nav_order: 2
 ---
 
-# 🎵 Music Dataset
+# Music Dataset
 
 This dataset explores how musical habits relate to mental health.  
 It includes variables such as **hours of listening per day**, **favorite genre**, and self-reported levels of **anxiety**, **depression**, and **insomnia**.
 
 ---
 
-## 🔥 Correlation Heatmap
+## Correlation Heatmap
 
 Shows relationships between all numerical variables.
 
@@ -18,7 +18,7 @@ Shows relationships between all numerical variables.
 
 ---
 
-## 🎧 Hours per Day vs Mental Health Score
+## Hours per Day vs Mental Health Score
 
 Does listening to music more hours each day improve or harm mental health?
 
@@ -26,25 +26,25 @@ Does listening to music more hours each day improve or harm mental health?
 
 ---
 
-## 😔 Depression vs Mental Health
+## Depression vs Mental Health
 
 ![Depression vs MH](assets/images/music_dep_vs_mh.png)
 
 ---
 
-## 😰 Anxiety vs Mental Health
+## Anxiety vs Mental Health
 
 ![Anxiety vs MH](assets/images/music_anx_vs_mh.png)
 
 ---
 
-## 🌙 Insomnia vs Mental Health
+## Insomnia vs Mental Health
 
 ![Insomnia vs MH](assets/images/music_insom_vs_mh.png)
 
 ---
 
-### 🔎 Key Takeaways (you can edit wording later)
+### Key Takeaways (you can edit wording later)
 
 - Light/moderate daily listening shows positive association with MH scores.  
 - Higher insomnia and anxiety correlate to lower mental health.  
