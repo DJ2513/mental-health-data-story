@@ -18,7 +18,7 @@ st.markdown(f"""
     <div style="text-align: left; padding: 0 0;">
         <img src="data:image/svg+xml;base64,{svg_data}" width="420"/>
     </div>
-    <div style="text-align: left; padding: 0 0;">
+    <div style="text-align: right; padding: 0 0;">
         <img src="data:image/svg+xml;base64,{people_data}" width="420"/>
     </div>
     """,
