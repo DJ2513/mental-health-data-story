@@ -4,6 +4,29 @@ import pandas as pd
 st.title("🎧 Music & Mental Health")
 
 st.markdown("""
+<style>
+h1 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+}
+h2, h3 {
+    font-weight: 600 !important;
+}
+p, li {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+}
+.card {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
 This section explores how music listening habits correlate with mental health. The visualizations below show 
 key relationships found in the dataset, including hours per day, genre preference, and mental health score.
 """)
