@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Social Media and Mental Health")
-
 st.markdown("""
 <style>
 
