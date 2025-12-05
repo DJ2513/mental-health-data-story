@@ -7,6 +7,9 @@ st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown("""
 <style>
+<div style="text-align: center; padding-top: 10px; padding-bottom: 20px;">
+    <img src="assets/mental_health.svg" alt="Logo" width="200" />
+</div>
 h1 {
     font-size: 3rem !important;
     font-weight: 700 !important;
