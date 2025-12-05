@@ -74,18 +74,17 @@ st.image("assets/images/music_corr.png", use_container_width=True)
 
 st.markdown('<div class="section-header">Genre Preference and Emotional Wellbeing</div>', unsafe_allow_html=True)
 
-col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        Different genres evoke different emotional responses.  
-        This visualization examines how mental health scores vary across preferred genres.
-        </div>
+
+st.markdown("""
+<div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+    <div>
+    Different genres evoke different emotional responses.  
+    This visualization examines how mental health scores vary across preferred genres.
     </div>
-    """, unsafe_allow_html=True)
-with col2:
-    st.image("assets/images/music_box_favgenre.png", use_container_width=True)
+</div>
+""", unsafe_allow_html=True)
+
+st.image("assets/images/music_box_favgenre.png", use_container_width=True)
 
 
 st.markdown('<div class="section-header">Daily Listening Time</div>', unsafe_allow_html=True)
