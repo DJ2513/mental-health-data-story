@@ -325,21 +325,16 @@ st.markdown("""
 <div class="card">
     <h3>Key Takeaway</h3>
     <p>
-    Mental health is shaped by a wide range of interconnected factors — emotional life satisfaction, 
-    daily habits, physical activity, digital behavior, and global social environments.  
-    No single dataset can explain wellbeing, but together, these perspectives reveal meaningful patterns 
-    that help us understand and support mental health more holistically.
+    Mental health is shaped by a complex network of personal behaviors, cultural influences, 
+    and global conditions. By examining wellbeing, physical activity, and digital life through 
+    multiple datasets, we begin to see patterns that reveal both challenges and opportunities.
     </p>
-
     <p>
-    We invite you to continue exploring the remaining sections of this project.  
-    Each chapter highlights a different dimension of modern wellbeing and offers insights into how 
-    everyday choices, cultural trends, and global conditions influence the mind.
+    The sections ahead explore each of these dimensions in more detail — offering insights 
+    into how daily habits, emotional environments, and social trends influence the mind.
     </p>
-
     <p style="font-weight:600; color:#000000;">
-        Your journey through the data begins here — discover how the world shapes mental health, and how 
-        mental health, in turn, shapes the world.
+    Continue exploring to discover how these stories connect and what they reveal about modern wellbeing.
     </p>
 </div>
 """, unsafe_allow_html=True)
