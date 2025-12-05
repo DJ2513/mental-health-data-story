@@ -15,7 +15,7 @@ st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown(f"""
     <div style="text-align: center; padding: 0 0;">
-        <img src="data:image/svg+xml;base64,{svg_data}" width="420", height="200"/>
+        <img src="data:image/svg+xml;base64,{svg_data}" width="420"/>
     </div>
     """,
     unsafe_allow_html=True
