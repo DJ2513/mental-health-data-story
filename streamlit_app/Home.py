@@ -5,6 +5,67 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
+st.markdown("""
+<style>
+/* Hide the sidebar completely */
+[data-testid="stSidebar"] {
+    display: none;
+}
+
+/* Make main page full width */
+[data-testid="stAppViewContainer"] {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Header bar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #005BBB;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: white !important;
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #FFD500 !important;
+    text-decoration: underline;
+}
+</style>
+
+<div class="navbar">
+    <a href="?page=Home">Home</a>
+    <a href="?page=Music">Music</a>
+    <a href="?page=Gym">Gym</a>
+    <a href="?page=Social">Social</a>
+    <a href="?page=WorldMaps">Global Maps</a>
+    <a href="?page=Comparison">Comparison</a>
+</div>
+""", unsafe_allow_html=True)
+
+query_params = st.experimental_get_query_params()
+page = query_params.get("page", ["Home"])[0]
+
+if page == "Music":
+    st.switch_page("pages/Music.py")
+elif page == "Gym":
+    st.switch_page("pages/Gym.py")
+elif page == "Social":
+    st.switch_page("pages/Social.py")
+elif page == "WorldMaps":
+    st.switch_page("pages/WorldMaps.py")
+elif page == "Comparison":
+    st.switch_page("pages/Comparison.py")
 
 st.title("🌍 Mental Health Data Story")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
@@ -15,9 +76,7 @@ relate to mental health. Below is a global 30-year animation built using **IHME 
 data, showing how the burden of depressive disorders has changed worldwide.
 """)
 
-# Include the global animation
 st.subheader("📈 Global Depression Trend (1990–2021) — Animated")
-
 
 df = pd.read_csv("assets/data/years.csv")
 
@@ -39,44 +98,34 @@ smooth_rates = np.interp(smooth_years, years, rates)
 fig = go.Figure()
 
 fig.add_trace(go.Scatter(
-    x=[smooth_years[0]],
-    y=[smooth_rates[0]],
-    mode="lines",
-    line=dict(color="#005BBB", width=4),
-    fill="tozeroy",
-    fillcolor="rgba(0, 91, 187, 0.1)"
+    x=[smooth_years[0]], y=[smooth_rates[0]],
+    mode="lines", line=dict(color="#005BBB", width=4),
+    fill="tozeroy", fillcolor="rgba(0, 91, 187, 0.1)"
 ))
 
 fig.add_trace(go.Scatter(
-    x=[smooth_years[0]],
-    y=[smooth_rates[0]],
+    x=[smooth_years[0]], y=[smooth_rates[0]],
     mode="markers",
     marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
 ))
 
 frames = []
 for i in range(1, len(smooth_years)):
-    frames.append(
-        go.Frame(
-            data=[
-                go.Scatter(
-                    x=smooth_years[:i+1],
-                    y=smooth_rates[:i+1],
-                    mode="lines",
-                    line=dict(color="#005BBB", width=4, shape="spline"),
-                    fill="tozeroy",
-                    fillcolor="rgba(0, 91, 187, 0.1)"
-                ),
-                go.Scatter(
-                    x=[smooth_years[i]],
-                    y=[smooth_rates[i]],
-                    mode="markers",
-                    marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
-                )
-            ],
-            name=str(int(smooth_years[i]))
-        )
-    )
+    frames.append(go.Frame(
+        data=[
+            go.Scatter(
+                x=smooth_years[:i+1], y=smooth_rates[:i+1],
+                mode="lines",
+                line=dict(color="#005BBB", width=4, shape="spline"),
+                fill="tozeroy", fillcolor="rgba(0, 91, 187, 0.1)"
+            ),
+            go.Scatter(
+                x=[smooth_years[i]], y=[smooth_rates[i]],
+                mode="markers",
+                marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
+            )
+        ]
+    ))
 
 fig.frames = frames
 
@@ -84,33 +133,28 @@ fig.update_layout(
     title="Global Depressive Disorder Burden (1990–2021)",
     xaxis=dict(title="Year", range=[years.min()-1, years.max()+1]),
     yaxis=dict(title="YLD Rate"),
-    width=900,
-    height=500,
-    updatemenus=[
-        {
-            "type": "buttons",
-            "buttons": [
-                {
-                    "label": "▶ Play",
-                    "method": "animate",
-                    "args": [None, dict(frame=dict(duration=40), transition=dict(duration=50))]
-                },
-                {
-                    "label": "⏸ Pause",
-                    "method": "animate",
-                    "args": [[None], dict(frame=dict(duration=0))]
-                }
-            ],
-            "x": 0.1,
-            "y": -0.15
-        }
-    ]
+    width=900, height=500,
+    updatemenus=[{
+        "type": "buttons",
+        "buttons": [
+            {
+                "label": "▶ Play",
+                "method": "animate",
+                "args": [None, dict(frame=dict(duration=40), transition=dict(duration=50))]
+            },
+            {
+                "label": "⏸ Pause",
+                "method": "animate",
+                "args": [[None], dict(frame=dict(duration=0))]
+            }
+        ],
+        "x": 0.1, "y": -0.15
+    }]
 )
 
 st.plotly_chart(fig, use_container_width=True)
 
 st.header("🌍 Global Interactive Maps")
-
 st.markdown("These maps illustrate worldwide patterns relating to mental health, gym culture, and social media use.")
 
 st.subheader("🧠 Mental Health Map")
@@ -124,4 +168,3 @@ st.components.v1.html(gym_html, height=600)
 st.subheader("📱 Social Media Use Map")
 sm_html = open("assets/maps/world_social.html", "r").read()
 st.components.v1.html(sm_html, height=600)
-
