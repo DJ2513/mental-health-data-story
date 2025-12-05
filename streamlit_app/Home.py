@@ -18,11 +18,95 @@ data, showing how the burden of depressive disorders has changed worldwide.
 st.header("📈 Global Depression Trend (1990–2021) — Animated")
 iframe_key = str(time.time())
 
-with open("assets/animations/global_depression.html", "r", encoding="utf-8") as f:
-    components.html(f.read(), height=600, scrolling=False, key=str(time.time()))
+wdf = pd.read_csv("assets/data/years.csv")
 
-components.html(html_data, height=600, scrolling=False, key=iframe_key)
+df_filtered = df[
+    (df["measure_name"] == "YLDs (Years Lived with Disability)") &
+    (df["metric_name"] == "Rate") &
+    (df["sex_name"] == "Both") &
+    (df["age_name"] == "All ages") &
+    (df["location_name"] == "Global") &
+    (df["cause_name"] == "Depressive disorders")
+].sort_values("year")
 
+years = df_filtered["year"].to_numpy()
+rates = df_filtered["val"].to_numpy()
+
+smooth_years = np.linspace(years.min(), years.max(), len(years) * 3)
+smooth_rates = np.interp(smooth_years, years, rates)
+
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(
+    x=[smooth_years[0]],
+    y=[smooth_rates[0]],
+    mode="lines",
+    line=dict(color="#005BBB", width=4),
+    fill="tozeroy",
+    fillcolor="rgba(0, 91, 187, 0.1)"
+))
+
+fig.add_trace(go.Scatter(
+    x=[smooth_years[0]],
+    y=[smooth_rates[0]],
+    mode="markers",
+    marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
+))
+
+frames = []
+for i in range(1, len(smooth_years)):
+    frames.append(
+        go.Frame(
+            data=[
+                go.Scatter(
+                    x=smooth_years[:i+1],
+                    y=smooth_rates[:i+1],
+                    mode="lines",
+                    line=dict(color="#005BBB", width=4, shape="spline"),
+                    fill="tozeroy",
+                    fillcolor="rgba(0, 91, 187, 0.1)"
+                ),
+                go.Scatter(
+                    x=[smooth_years[i]],
+                    y=[smooth_rates[i]],
+                    mode="markers",
+                    marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
+                )
+            ],
+            name=str(int(smooth_years[i]))
+        )
+    )
+
+fig.frames = frames
+
+fig.update_layout(
+    title="Global Depressive Disorder Burden (1990–2021)",
+    xaxis=dict(title="Year", range=[years.min()-1, years.max()+1]),
+    yaxis=dict(title="YLD Rate"),
+    width=900,
+    height=500,
+    updatemenus=[
+        {
+            "type": "buttons",
+            "buttons": [
+                {
+                    "label": "▶ Play",
+                    "method": "animate",
+                    "args": [None, dict(frame=dict(duration=3), transition=dict(duration=5))]
+                },
+                {
+                    "label": "⏸ Pause",
+                    "method": "animate",
+                    "args": [[None], dict(frame=dict(duration=0))]
+                }
+            ],
+            "x": 0.1,
+            "y": -0.15
+        }
+    ]
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
 st.title("🌍 Global Interactive Maps")
 

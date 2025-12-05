@@ -1,0 +1,69 @@
+measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1990,474.80666308410264,672.0009439383904,320.0233658421113
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1996,483.31856609895135,681.1909365167935,328.4655902060845
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1993,472.4597132947556,659.3512829444861,322.2789068627502
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1991,475.90879990482614,671.3305282961629,322.31106656608824
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1992,475.81003461903873,667.875187466427,321.69704262225656
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1994,479.80297707754005,665.6763289598165,329.4339927622729
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1995,478.48228028510283,667.4985041804011,327.36668106510626
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1999,494.3179568604842,676.5071995619267,329.58697615733905
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2001,500.4917315317486,671.479937658953,334.4337017386443
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1997,486.00360304663036,682.8525277159166,329.63361511061674
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2003,510.8196593918416,692.5020065628075,344.621180457141
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1998,489.38866966697105,687.9591593578929,330.1318660006539
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2000,497.2869248191327,671.6103141187768,330.4920519122069
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2002,507.4367683277149,682.7588261253994,341.581601526948
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2005,519.5087608300389,710.8224514003008,351.52230466032626
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2007,529.4262933645543,721.4181264392911,362.0956784431287
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2006,523.2578773804045,711.9108366856765,356.3697292111301
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2004,516.2030680831225,702.0991106636128,347.3834108537813
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2008,529.8865663424758,720.9137886677004,363.74858619646125
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2010,538.2289615813581,731.9574175279548,368.91819868752765
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2009,535.8710684367587,723.6966239220152,366.61210459149515
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2012,545.3494588404111,752.7166427724279,370.89925377727604
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2011,542.1440764918275,742.4930472978839,368.99163545071565
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2014,552.7600434537525,765.7602635199072,377.69254932746
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2016,560.7406443669558,780.398831642092,386.9356095476494
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2013,547.7696890843636,757.7629664170223,372.985518634853
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2015,555.6154197115936,774.7031378016784,381.01784390032446
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2018,566.9056778303316,804.4875720502495,391.4011293060981
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2020,683.3251276631614,979.0728522670773,473.2041887361898
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2017,563.9353753033738,788.1107375255328,390.5304811051883
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2022,681.3758507370069,978.9465929018716,469.01967410467665
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2019,570.8319503957952,818.6979294800786,394.2011100626443
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2021,688.2278196797406,989.0074812375287,473.2674422474327
+2,DALYs (Disability-Adjusted Life Years),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2023,694.6283336205529,995.0087497676687,473.4013838515735
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1990,474.80666308409997,672.0009439383899,320.02336584211
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1991,475.90879990481994,671.33052829616,322.31106656608
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1992,475.81003461903,667.87518746642,321.69704262225
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1993,472.45971329475,659.35128294448,322.27890686275003
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1994,479.80297707753,665.67632895981,329.43399276227
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1995,478.48228028510005,667.4985041804,327.3666810651
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1996,483.31856609895004,681.19093651679,328.46559020608
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1997,486.00360304661996,682.85252771591,329.63361511061
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1998,489.38866966697003,687.9591593578899,330.13186600065
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,1999,494.31795686048,676.50719956192,329.58697615733
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2000,497.28692481913004,671.61031411877,330.4920519122
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2001,500.49173153174,671.47993765895,334.43370173863997
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2002,507.43676832770996,682.75882612539,341.58160152694
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2003,510.81965939184005,692.5020065628,344.62118045714004
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2004,516.20306808312,702.09911066361,347.38341085378
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2005,519.50876083003,710.8224514003,351.52230466032
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2006,523.2578773804,711.91083668567,356.36972921113
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2007,529.42629336455,721.41812643929,362.09567844312
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2008,529.88656634247,720.9137886677,363.74858619646
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2009,535.87106843675,723.6966239220101,366.61210459149
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2010,538.2289615813501,731.9574175279499,368.91819868752003
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2011,542.14407649182,742.49304729788,368.99163545071
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2012,545.3494588404101,752.71664277242,370.89925377727
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2013,547.76968908436,757.76296641702,372.98551863485
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2014,552.7600434537501,765.7602635198999,377.69254932746
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2015,555.61541971159,774.70313780167,381.01784390032003
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2016,560.74064436695,780.39883164209,386.93560954763996
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2017,563.93537530337,788.1107375255301,390.53048110518
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2018,566.90567783033,804.48757205024,391.40112930609007
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2019,570.8319503957899,818.69792948007,394.20111006264
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2020,683.32512766316,979.0728522670701,473.20418873617996
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2021,688.22781967974,989.0074812375201,473.26744224743004
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2022,681.375850737,978.94659290187,469.01967410467006
+3,YLDs (Years Lived with Disability),1,Global,3,Both,22,All ages,567,Depressive disorders,3,Rate,2023,694.62833362055,995.00874976766,473.40138385157
