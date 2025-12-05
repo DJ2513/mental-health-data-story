@@ -45,7 +45,7 @@ p, li {
 """, unsafe_allow_html=True)
 
 
-st.title("🌍 Global Mental Health Insights")
+st.header("🌍 Global Mental Health Insights")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
 
 st.markdown("""
