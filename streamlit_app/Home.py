@@ -2,14 +2,20 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
+import base64
 
+def load_svg(svg_path):
+    with open(svg_path, "r", encoding="utf-8") as file:
+        return file.read()
+
+svg_logo = load_svg("assets/mental_health.svg")
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown("""
 <style>
-<div style="text-align: center; padding-top: 10px; padding-bottom: 20px;">
-    <img src="assets/mental_health.svg" alt="Logo" width="200" />
-</div>
+<div style="text-align: center; padding: 20px 0;">
+        {svg_logo}
+    </div>
 h1 {
     font-size: 3rem !important;
     font-weight: 700 !important;
