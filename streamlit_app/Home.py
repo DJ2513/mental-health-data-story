@@ -5,39 +5,6 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
-st.markdown("""
-<style>
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #005BBB;
-    padding: 14px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-.navbar a {
-    color: white !important;
-    margin: 0 25px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-}
-.navbar a:hover {
-    color: #FFD500 !important;
-    text-decoration: underline;
-}
-</style>
-
-<div class="navbar">
-    <a href="/">Home</a>
-    <a href="/Music">Music</a>
-    <a href="/Gym">Gym</a>
-    <a href="/Social">Social</a>
-    <a href="/WorldMaps">Global Maps</a>
-    <a href="/Comparison">Comparison</a>
-</div>
-""", unsafe_allow_html=True)
-
 st.title("🌍 Mental Health Data Story")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
 
