@@ -91,7 +91,7 @@ p, li, div {
 """, unsafe_allow_html=True)
 
 
-st.header("🌍 Global Mental Health Insights")
+st.title("Global Mental Health Insights")
 st.subheader("A Multi-Dataset Exploration of Modern Wellbeing")
 
 st.markdown("""
@@ -112,7 +112,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("""
     <div class="card">
-        <h3>😊 Happiness & Life Satisfaction</h3>
+        <h3>Happiness & Life Satisfaction</h3>
         <p>Insights from the World Happiness Report reveal social, economic, and emotional conditions influencing global well-being.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -120,7 +120,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="card">
-        <h3>🎵 Music, Mood & Behavior</h3>
+        <h3>Music, Mood & Behavior</h3>
         <p>Music affects emotional states and reflects broader cultural trends. Analyzing global listening patterns uncovers surprising mood correlations.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -128,7 +128,7 @@ with col2:
 with col3:
     st.markdown("""
     <div class="card">
-        <h3>⚠️ Global Suicide Rates</h3>
+        <h3>Global Suicide Rates</h3>
         <p>One of the most severe indicators of mental distress. Mapping suicide data reveals vulnerable regions and risk factors.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -137,7 +137,7 @@ with col3:
 st.markdown("---")
 
 
-st.header("📈 Global Depression Trend (1990–2021) — Animated")
+st.header("Global Depression Trend (1990–2021) — Animated")
 
 st.markdown("""
 Below is a 30-year animation built using **IHME Global Burden of Disease (GBD)** data, illustrating 
@@ -219,14 +219,14 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("---")
 
-st.header("🌍 Global Interactive Maps")
+st.header("Global Interactive Maps")
 st.markdown("""
 These interactive maps help illustrate how different lifestyle and environmental factors relate to 
 mental health around the world. By visualizing global patterns, we can better understand where risk 
 factors are concentrated — and where protective behaviors may be more common.
 """)
 
-st.subheader("🧠 Mental Health Map")
+st.subheader("Mental Health Map")
 st.markdown("""
 This map visualizes global mental health burden indicators.  
 It provides a high-level view of how depressive disorders, anxiety, and related conditions vary across regions.  
@@ -236,7 +236,7 @@ Higher values indicate a greater prevalence or impact of mental health challenge
 mh_html = open("assets/maps/world_mh_real.html", "r").read()
 st.components.v1.html(mh_html, height=400)
 
-st.subheader("🏋️ Gym Culture Index Map")
+st.subheader("Gym Culture Index Map")
 st.markdown("""
 Physical activity is one of the strongest protective factors for mental well-being.  
 This map represents the **Gym Culture Index**, reflecting how active different countries are in terms 
@@ -248,7 +248,7 @@ Countries with stronger fitness cultures often show better mental health outcome
 gym_html = open("assets/maps/world_gym.html", "r").read()
 st.components.v1.html(gym_html, height=400)
 
-st.subheader("📱 Social Media Use Map")
+st.subheader("Social Media Use Map")
 st.markdown("""
 Social media can influence mental health both positively and negatively.  
 High usage may correlate with increased connectivity — but also with stress, comparison, 
