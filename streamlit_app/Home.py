@@ -11,11 +11,15 @@ def svg_to_base64(svg_path):
         return base64.b64encode(f.read()).decode()
 
 svg_data = svg_to_base64("assets/mental_health.svg")
+people_data = svg_to_base64("assets/people.svg")
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 st.markdown(f"""
-    <div style="text-align: center; padding: 0 0;">
+    <div style="text-align: left; padding: 0 0;">
         <img src="data:image/svg+xml;base64,{svg_data}" width="420"/>
+    </div>
+    <div style="text-align: left; padding: 0 0;">
+        <img src="data:image/svg+xml;base64,{people_data}" width="420"/>
     </div>
     """,
     unsafe_allow_html=True
