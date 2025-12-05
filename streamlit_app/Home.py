@@ -34,30 +34,32 @@ st.markdown(f"""
 st.markdown("""
 <style>
 
-/* GLOBAL BACKGROUND + DEFAULT FONT */
 html, body, [data-testid="stAppViewContainer"] {
     background-color: #fbf2e8 !important;
-    font-family: 'Open Sans', sans-serif;
     color: #727272 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* HEADERS */
+/* Sidebar icon fix — now default font will not override it */
+span[data-baseweb="icon"] {
+    font-family: inherit !important;
+}
+
+/* Headings */
 h1, h2, h3, h4 {
-    font-family: 'Lato', sans-serif !important;
     color: #000000 !important;
     font-weight: 700 !important;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
 }
 
-/* GENERAL TEXT */
+/* General text */
 p, div, span, li {
-    font-family: 'Open Sans', sans-serif !important;
     font-size: 1.15rem !important;
     line-height: 1.7 !important;
     color: #727272 !important;
 }
 
-/* HERO BLOCK */
+/* Hero Block */
 .hero {
     background-color: #607aa2;
     padding: 60px 50px;
@@ -67,20 +69,18 @@ p, div, span, li {
 }
 .hero h1, .hero p {
     color: white !important;
-    font-family: 'Lato', sans-serif !important;
 }
 
-/* SECTION HEADERS */
+/* Section Header */
 .section-header {
     font-size: 2.2rem !important;
     font-weight: 700 !important;
-    font-family: 'Lato', sans-serif !important;
     color: #000000 !important;
     margin-top: 60px !important;
     margin-bottom: 25px !important;
 }
 
-/* CARDS */
+/* Cards */
 .card {
     background-color: #ffffff;
     padding: 35px;
@@ -89,7 +89,7 @@ p, div, span, li {
     margin: 25px 0;
 }
 
-/* HORIZONTAL STORY BLOCKS */
+/* Story Blocks */
 .story-block {
     display: flex;
     gap: 40px;
@@ -100,20 +100,18 @@ p, div, span, li {
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.10);
 }
-
-/* REVERSE LAYOUT */
 .story-block-reverse {
     flex-direction: row-reverse;
 }
 
-/* ROUNDED IMAGE BLOCKS (e.g., charts, maps) */
+/* Rounded images (charts/maps) */
 .rounded-image {
     border-radius: 25px;
-    margin-bottom: 30px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
-/* CENTER ALIGN */
+/* Center alignment */
 .center {
     text-align: center;
 }
