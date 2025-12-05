@@ -20,7 +20,7 @@ data, showing how the burden of depressive disorders has changed worldwide.
 st.header("📈 Global Depression Trend (1990–2021) — Animated")
 iframe_key = str(time.time())
 
-wdf = pd.read_csv("assets/data/years.csv")
+df = pd.read_csv("assets/data/years.csv")
 
 df_filtered = df[
     (df["measure_name"] == "YLDs (Years Lived with Disability)") &
