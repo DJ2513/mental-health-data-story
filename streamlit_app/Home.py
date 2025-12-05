@@ -12,8 +12,8 @@ def png_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-mental_png = png_to_base64("assets/mental_health.png")
-people_png = png_to_base64("assets/people.png")
+mental_png = png_to_base64("streamlit_app/assets/mental_health.png")
+people_png = png_to_base64("streamlit_app/assets/people.png")
 
 st.markdown(f"""
     <div style="
