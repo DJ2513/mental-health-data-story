@@ -1,3 +1,4 @@
+import time
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -15,10 +16,12 @@ data, showing how the burden of depressive disorders has changed worldwide.
 
 # Include the global animation
 st.header("📈 Global Depression Trend (1990–2021) — Animated")
-with open("assets/animations/global_depression_timeseries_super_smooth.html", "r", encoding="utf-8") as f:
-    html = f.read()
+iframe_key = str(time.time())
 
-components.html(html, height=600, scrolling=False)
+with open("assets/animations/global_depression_timeseries_TURBO.html", "r", encoding="utf-8") as f:
+    html_data = f.read()
+
+components.html(html_data, height=600, scrolling=False, key=iframe_key)
 
 
 st.title("🌍 Global Interactive Maps")
@@ -37,5 +40,3 @@ st.subheader("📱 Social Media Use Map")
 sm_html = open("assets/maps/world_social.html", "r").read()
 st.components.v1.html(sm_html, height=600)
 
-st.markdown("---")
-st.markdown("Use the sidebar to navigate through the datasets.")
