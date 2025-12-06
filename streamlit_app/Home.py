@@ -54,7 +54,6 @@ p, li, span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 
 .hero-left-text {
