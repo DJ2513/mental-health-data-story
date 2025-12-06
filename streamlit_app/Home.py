@@ -149,6 +149,7 @@ with col1:
 with col2:
     df = pd.read_csv("assets/data/years.csv")
 
+    # Filter for the global depressive disorder burden
     df_filtered = df[
         (df["measure_name"] == "YLDs (Years Lived with Disability)") &
         (df["metric_name"] == "Rate") &
@@ -158,29 +159,94 @@ with col2:
         (df["cause_name"] == "Depressive disorders")
     ].sort_values("year")
 
+    # Extract arrays
     years = df_filtered["year"].to_numpy()
     rates = df_filtered["val"].to_numpy()
 
+    # Smooth interpolation for better animation
     smooth_years = np.linspace(years.min(), years.max(), len(years) * 3)
     smooth_rates = np.interp(smooth_years, years, rates)
 
+    # Create base figure
     fig = go.Figure()
 
+    # Initial line
     fig.add_trace(go.Scatter(
-        x=smooth_years, y=smooth_rates,
+        x=[smooth_years[0]],
+        y=[smooth_rates[0]],
         mode="lines",
         line=dict(color="#005BBB", width=4),
         fill="tozeroy",
         fillcolor="rgba(0, 91, 187, 0.1)"
     ))
 
-    fig.update_layout(
-        title="Global Depressive Disorder Burden",
-        xaxis=dict(title="Year"),
-        yaxis=dict(title="YLD Rate"),
-        height=400
-    )
+    # Initial marker
+    fig.add_trace(go.Scatter(
+        x=[smooth_years[0]],
+        y=[smooth_rates[0]],
+        mode="markers",
+        marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
+    ))
 
+    # Build animation frames
+    frames = []
+    for i in range(1, len(smooth_years)):
+        frames.append(go.Frame(
+            data=[
+                go.Scatter(
+                    x=smooth_years[:i+1],
+                    y=smooth_rates[:i+1],
+                    mode="lines",
+                    line=dict(color="#005BBB", width=4, shape="spline"),
+                    fill="tozeroy",
+                    fillcolor="rgba(0, 91, 187, 0.1)"
+                ),
+                go.Scatter(
+                    x=[smooth_years[i]],
+                    y=[smooth_rates[i]],
+                    mode="markers",
+                    marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
+                )
+            ],
+            name=str(int(smooth_years[i]))
+        ))
+
+    fig.frames = frames
+
+    # Layout and animation speed controls
+    fig.update_layout(
+        title="Global Depressive Disorder Burden (1990–2021)",
+        xaxis=dict(title="Year", range=[years.min() - 1, years.max() + 1]),
+        yaxis=dict(title="YLD Rate"),
+        width=900,
+        height=500,
+        updatemenus=[
+            {
+                "type": "buttons",
+                "buttons": [
+                    {
+                        "label": "▶ Play",
+                        "method": "animate",
+                        "args": [
+                            None,
+                            dict(
+                                frame=dict(duration=40, redraw=True),
+                                transition=dict(duration=50),
+                                fromcurrent=True
+                            )
+                        ]
+                    },
+                    {
+                        "label": "⏸ Pause",
+                        "method": "animate",
+                        "args": [[None], dict(frame=dict(duration=0))]
+                    }
+                ],
+                "x": 0.1,
+                "y": -0.15
+            }
+        ]
+    )
     st.plotly_chart(fig, use_container_width=True)
 
 st.markdown('<div class="section-header">Global Interactive Maps</div>', unsafe_allow_html=True)
