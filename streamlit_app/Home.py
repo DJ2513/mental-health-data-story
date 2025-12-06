@@ -81,7 +81,7 @@ p, li, span {
 
 st.markdown(
 f"""
-
+<div>
 <div class="hero">
     <div class="hero-flex">
         <div class="hero-left">
@@ -92,6 +92,7 @@ f"""
     </div>
 </div>
 <img src="data:image/png;base64,{people_png}" style="width:400px;" />
+</div>
 """,
 unsafe_allow_html=True
 )
