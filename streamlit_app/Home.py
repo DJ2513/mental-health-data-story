@@ -112,7 +112,6 @@ st.markdown(f"""
     flex-wrap: wrap;
 ">
 
-    <!-- LEFT SIDE: logo + title -->
     <div style="display: flex; align-items: center; gap: 20px;">
         <img src="data:image/png;base64,{mental_png}" 
              style="width:160px; border-radius:12px;" />
@@ -122,7 +121,6 @@ st.markdown(f"""
         </div>
     </div>
 
-    <!-- RIGHT SIDE: people PNG -->
     <img src="data:image/png;base64,{people_png}" 
          style="width:200px; border-radius:12px;" />
 
