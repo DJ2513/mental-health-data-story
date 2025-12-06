@@ -35,6 +35,30 @@ st.markdown(
 )
 
 st.markdown(
+    f"""
+<div style="
+    background-color:#607aa2;
+    padding:40px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+">
+    <div style="display:flex; align-items:center; gap:20px;">
+        <img src="data:image/png;base64,{mental_png}" style="width:150px;" />
+        <div>
+            <h1 style="margin-bottom:6px;">Global Mental Health Insights</h1>
+            <p style="margin-top:0;">A multi-dataset exploration</p>
+        </div>
+    </div>
+
+    <img src="data:image/png;base64,{people_png}" style="width:180px;" />
+</div>
+""",
+    unsafe_allow_html=True
+)
+
+st.markdown(
     """
 <style>
 
