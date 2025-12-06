@@ -3,7 +3,6 @@ import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
 import base64
-
 from helpers import navigation_buttons
 
 st.set_page_config(page_title="Mental Health Story", layout="wide")
@@ -15,95 +14,6 @@ def png_to_base64(path):
 mental_png = png_to_base64("streamlit_app/assets/mental_health.png")
 people_png = png_to_base64("streamlit_app/assets/people.png")
 
-st.markdown("""
-<style>
-
-html, body, [data-testid="stAppViewContainer"] {
-    background-color: #fbf2e8 !important;
-    color: #727272 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-/* Sidebar icon fix — now default font will not override it */
-span[data-baseweb="icon"] {
-    font-family: inherit !important;
-}
-
-/* Headings */
-h1, h2, h3, h4 {
-    color: #000000 !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.2px;
-}
-
-/* General text */
-p, div, span, li {
-    font-size: 1.15rem !important;
-    line-height: 1.7 !important;
-    color: #727272 !important;
-}
-
-/* Hero Block */
-.hero {
-    background-color: #607aa2;
-    padding: 60px 50px;
-    border-radius: 30px;
-    margin-bottom: 50px;
-    color: white !important;
-}
-.hero h1, .hero p {
-    color: white !important;
-}
-
-/* Section Header */
-.section-header {
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    color: #000000 !important;
-    margin-top: 60px !important;
-    margin-bottom: 25px !important;
-}
-
-/* Cards */
-.card {
-    background-color: #ffffff;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    margin: 25px 0;
-}
-
-/* Story Blocks */
-.story-block {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin: 60px 0;
-}
-.story-block img {
-    border-radius: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
-}
-.story-block-reverse {
-    flex-direction: row-reverse;
-}
-
-/* Rounded images (charts/maps) */
-.rounded-image {
-    border-radius: 25px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-/* Center alignment */
-.center {
-    text-align: center;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-
 st.markdown(
     f"""
 <div class="hero" style="
@@ -112,7 +22,6 @@ st.markdown(
     align-items: center;
     flex-wrap: wrap;
 ">
-
     <div style="display: flex; align-items: center; gap: 20px;">
         <img src="data:image/png;base64,{mental_png}" 
              style="width:160px; border-radius:12px;" />
@@ -124,14 +33,67 @@ st.markdown(
 
     <img src="data:image/png;base64,{people_png}" 
          style="width:200px; border-radius:12px;" />
-
 </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+<style>
+
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: #fbf2e8 !important;
+    color: #727272 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+span[data-baseweb="icon"] {
+    font-family: inherit !important;
+}
+
+h1, h2, h3, h4 {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.2px;
+}
+
+p, div, span, li {
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+}
+
+.hero {
+    background-color: #607aa2;
+    padding: 60px 50px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    color: white !important;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    margin: 25px 0;
+}
+
+.section-header {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-top: 60px !important;
+    margin-bottom: 25px !important;
+}
+
+</style>
 """,
     unsafe_allow_html=True
 )
 
-
-st.markdown("""
+st.markdown(
+    """
 Mental health is a fundamental component of human well-being. It shapes how individuals think, feel, and act, 
 influencing relationships, productivity, and overall quality of life. Yet despite its importance, mental health 
 remains unevenly supported and widely misunderstood across the world.
@@ -141,63 +103,76 @@ interactions between personal habits, social structures, and cultural environmen
 is essential for developing healthier societies.
 
 This project examines mental health through three global datasets, each offering insight into a different dimension of wellbeing:
-""")
-
+"""
+)
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("""
-    <div class="card">
-        <h3>Happiness & Life Satisfaction</h3>
-        <p>Emotional and social wellbeing indicators that reveal how people across the world experience life satisfaction.</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="card">
+            <h3>Happiness & Life Satisfaction</h3>
+            <p>Emotional and social wellbeing indicators that reveal how people across the world experience life satisfaction.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 with col2:
-    st.markdown("""
-    <div class="card">
-        <h3>Music, Mood & Behavior</h3>
-        <p>How listening patterns reflect and influence emotional states, energy levels, and mood variations across regions.</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class="card">
+            <h3>Music, Mood & Behavior</h3>
+            <p>How listening patterns reflect and influence emotional states, energy levels, and mood variations across regions.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 with col3:
-    st.markdown("""
-    <div class="card">
-        <h3>Global Suicide Rates</h3>
-        <p>One of the most significant indicators of mental distress. Mapping these data reveals vulnerable demographics and regions.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-
-st.markdown("""
-<div class="section-header">Global Depression Trend (1990–2021)</div>
-""", unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        This 30-year animation, created using IHME Global Burden of Disease data, shows how depressive 
-        disorders have evolved over time at the global level.  
-        The metric used is <strong>Years Lived with Disability (YLDs)</strong>, which captures the non-fatal 
-        burden of depressive disorders.
+    st.markdown(
+        """
+        <div class="card">
+            <h3>Global Suicide Rates</h3>
+            <p>One of the most significant indicators of mental distress. Mapping these data reveals vulnerable demographics and regions.</p>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
+
+st.markdown(
+    """<div class="section-header">Global Depression Trend (1990–2021)</div>""",
+    unsafe_allow_html=True,
+)
+
+col1, col2 = st.columns([1, 1])
+
+with col1:
+    st.markdown(
+        """
+        <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+            <div>
+            This 30-year animation, created using IHME Global Burden of Disease data, shows how depressive 
+            disorders have evolved over time at the global level.  
+            The metric used is <strong>Years Lived with Disability (YLDs)</strong>, which captures the non-fatal 
+            burden of depressive disorders.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 with col2:
     df = pd.read_csv("assets/data/years.csv")
 
     df_filtered = df[
-        (df["measure_name"] == "YLDs (Years Lived with Disability)") &
-        (df["metric_name"] == "Rate") &
-        (df["sex_name"] == "Both") &
-        (df["age_name"] == "All ages") &
-        (df["location_name"] == "Global") &
-        (df["cause_name"] == "Depressive disorders")
+        (df["measure_name"] == "YLDs (Years Lived with Disability)")
+        & (df["metric_name"] == "Rate")
+        & (df["sex_name"] == "Both")
+        & (df["age_name"] == "All ages")
+        & (df["location_name"] == "Global")
+        & (df["cause_name"] == "Depressive disorders")
     ].sort_values("year")
 
     years = df_filtered["year"].to_numpy()
@@ -208,123 +183,175 @@ with col2:
 
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(
-        x=[smooth_years[0]], y=[smooth_rates[0]],
-        mode="lines", 
-        line=dict(color="#005BBB", width=4),
-        fill="tozeroy", 
-        fillcolor="rgba(0, 91, 187, 0.1)"
-    ))
+    fig.add_trace(
+        go.Scatter(
+            x=[smooth_years[0]],
+            y=[smooth_rates[0]],
+            mode="lines",
+            line=dict(color="#005BBB", width=4),
+            fill="tozeroy",
+            fillcolor="rgba(0, 91, 187, 0.1)",
+        )
+    )
 
-    fig.add_trace(go.Scatter(
-        x=[smooth_years[0]], y=[smooth_rates[0]],
-        mode="markers",
-        marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
-    ))
+    fig.add_trace(
+        go.Scatter(
+            x=[smooth_years[0]],
+            y=[smooth_rates[0]],
+            mode="markers",
+            marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white")),
+        )
+    )
 
     frames = []
     for i in range(1, len(smooth_years)):
-        frames.append(go.Frame(
-            data=[
-                go.Scatter(
-                    x=smooth_years[:i+1], y=smooth_rates[:i+1],
-                    mode="lines",
-                    line=dict(color="#005BBB", width=4, shape="spline"),
-                    fill="tozeroy", 
-                    fillcolor="rgba(0, 91, 187, 0.1)"
-                ),
-                go.Scatter(
-                    x=[smooth_years[i]], y=[smooth_rates[i]],
-                    mode="markers",
-                    marker=dict(size=12, color="#FFD500", line=dict(width=2, color="white"))
-                )
-            ]
-        ))
+        frames.append(
+            go.Frame(
+                data=[
+                    go.Scatter(
+                        x=smooth_years[: i + 1],
+                        y=smooth_rates[: i + 1],
+                        mode="lines",
+                        line=dict(color="#005BBB", width=4, shape="spline"),
+                        fill="tozeroy",
+                        fillcolor="rgba(0, 91, 187, 0.1)",
+                    ),
+                    go.Scatter(
+                        x=[smooth_years[i]],
+                        y=[smooth_rates[i]],
+                        mode="markers",
+                        marker=dict(
+                            size=12, color="#FFD500", line=dict(width=2, color="white")
+                        ),
+                    ),
+                ]
+            )
+        )
 
     fig.frames = frames
 
     fig.update_layout(
         title="Global Depressive Disorder Burden (1990–2021)",
-        xaxis=dict(title="Year", range=[years.min()-1, years.max()+1]),
+        xaxis=dict(title="Year", range=[years.min() - 1, years.max() + 1]),
         yaxis=dict(title="YLD Rate"),
-        width=900, height=500,
-        updatemenus=[{
-            "type": "buttons",
-            "buttons": [
-                {"label": "Play", "method": "animate",
-                "args": [None, dict(frame=dict(duration=40), transition=dict(duration=50))]},
-                {"label": "Pause", "method": "animate",
-                "args": [[None], dict(frame=dict(duration=0))]}
-            ],
-            "x": 0.1, "y": -0.15
-        }]
+        width=900,
+        height=500,
+        updatemenus=[
+            {
+                "type": "buttons",
+                "buttons": [
+                    {
+                        "label": "Play",
+                        "method": "animate",
+                        "args": [
+                            None,
+                            dict(
+                                frame=dict(duration=40), transition=dict(duration=50)
+                            ),
+                        ],
+                    },
+                    {
+                        "label": "Pause",
+                        "method": "animate",
+                        "args": [[None], dict(frame=dict(duration=0))],
+                    },
+                ],
+                "x": 0.1,
+                "y": -0.15,
+            }
+        ],
     )
+
     st.plotly_chart(fig, use_container_width=True)
 
+st.markdown(
+    """<div class="section-header">Global Interactive Maps</div>""",
+    unsafe_allow_html=True,
+)
 
-st.markdown("""
-<div class="section-header">Global Interactive Maps</div>
-""", unsafe_allow_html=True)
-
-st.markdown("""
+st.markdown(
+    """
 These maps provide a geographic perspective on different factors related to mental wellbeing.
 Each dataset highlights patterns that may influence stress levels, emotional balance, lifestyle decisions, 
 and exposure to digital environments.
-""")
+"""
+)
 
+st.markdown(
+    """<div class="section-header">Mental Health Burden</div>""",
+    unsafe_allow_html=True,
+)
 
-st.markdown('<div class="section-header">Mental Health Burden</div>', unsafe_allow_html=True)
+col1, col2 = st.columns([1, 1])
 
-col1, col2 = st.columns([1,1])
 with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        This map visualizes the burden of mental health disorders globally, including depression and anxiety.  
-        Higher values indicate regions where mental health challenges are more prevalent or severe.
+    st.markdown(
+        """
+        <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+            <div>
+            This map visualizes the burden of mental health disorders globally, including depression and anxiety.  
+            Higher values indicate regions where mental health challenges are more prevalent or severe.
+            </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
+
 with col2:
-    mh_html = open("assets/maps/world_mh_real.html", "r").read()
+    mh_html = open("assets/maps/world_mh_real.html").read()
     st.components.v1.html(mh_html, height=350)
 
+st.markdown(
+    """<div class="section-header">Physical Activity and Gym Culture</div>""",
+    unsafe_allow_html=True,
+)
 
-st.markdown('<div class="section-header">Physical Activity and Gym Culture</div>', unsafe_allow_html=True)
+col1, col2 = st.columns([1, 1])
 
-col1, col2 = st.columns([1,1])
 with col1:
-    gym_html = open("assets/maps/world_gym.html", "r").read()
+    gym_html = open("assets/maps/world_gym.html").read()
     st.components.v1.html(gym_html, height=350)
+
 with col2:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        Physical activity is a protective factor for emotional resilience.  
-        This map highlights how active different regions are — from general exercise habits to gym engagement.
+    st.markdown(
+        """
+        <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+            <div>
+            Physical activity is a protective factor for emotional resilience.  
+            This map highlights how active different regions are — from general exercise habits to gym engagement.
+            </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
 
+st.markdown(
+    """<div class="section-header">Social Media Usage</div>""",
+    unsafe_allow_html=True,
+)
 
-st.markdown('<div class="section-header">Social Media Usage</div>', unsafe_allow_html=True)
+col1, col2 = st.columns([1, 1])
 
-col1, col2 = st.columns([1,1])
 with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        Digital environments influence mental wellbeing through exposure to information, comparison, 
-        social interactions, and screen habits.  
-        This map shows how intensively people in different regions use social media platforms.
+    st.markdown(
+        """
+        <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+            <div>
+            Digital environments influence mental wellbeing through exposure to information, comparison, 
+            social interactions, and screen habits.  
+            This map shows how intensively people in different regions use social media platforms.
+            </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True,
+    )
+
 with col2:
-    sm_html = open("assets/maps/world_social.html", "r").read()
+    sm_html = open("assets/maps/world_social.html").read()
     st.components.v1.html(sm_html, height=350)
 
-st.markdown("""
+st.markdown(
+    """
 <div class="card">
     <h3>Key Takeaway</h3>
     <p>
@@ -334,14 +361,17 @@ st.markdown("""
     </p>
     <p>
     The sections ahead explore each of these dimensions in more detail — offering insights 
-    into how daily habits, emotional environments, and social trends influence the mind.
+    into how daily habits, emotional environments... 
     </p>
     <p style="font-weight:600; color:#000000;">
     Continue exploring to discover how these stories connect and what they reveal about modern wellbeing.
     </p>
 </div>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 navigation_buttons(
-    next_link="pages/Gym.py", next_label="Next: Gym Activity →"
+    next_link="pages/Gym.py",
+    next_label="Next: Gym Activity →"
 )
