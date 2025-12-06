@@ -140,10 +140,10 @@ col1, col2 = st.columns([1,1])
 
 with col1:
     st.markdown("""
-    Over the past three decades, depressive disorders have shown shifts linked to 
-    social changes, economic pressures, global crises, and evolving healthcare systems.
-    This chart uses data from the Global Burden of Disease (GBD) to visualize 
-    <strong>Years Lived with Disability (YLDs)</strong> attributable to depression worldwide.
+    Over the past three decades, depressive disorders have shown eleveated shifts linked to 
+    many events, either national or international like :social changes, economic pressures, 
+    global wars, and a recient world pandemics.This chart uses data from the Global Burden of 
+    Disease (GBD) to visualize <strong>Years Lived with Disability (YLDs)</strong> attributable to depression worldwide.
     """, unsafe_allow_html=True)
 
 with col2:
@@ -185,7 +185,7 @@ st.markdown('<div class="section-header">Global Interactive Maps</div>', unsafe_
 
 st.markdown("""
 These maps highlight global patterns related to mental health, physical activity, 
-and digital behaviors — offering a geographic context for understanding wellbeing.
+and digital behaviors of all people in the world — offering a geographic context for understanding wellbeing.
 """)
 
 st.markdown('<div class="section-header">Mental Health Burden</div>', unsafe_allow_html=True)
@@ -193,7 +193,10 @@ st.markdown('<div class="section-header">Mental Health Burden</div>', unsafe_all
 col1, col2 = st.columns([1,1])
 
 with col1:
-    st.markdown("This map shows worldwide patterns of mental health challenges such as depression and anxiety.")
+    st.markdown("""This map shows worldwide patterns of mental health challenges 
+                such as depression and anxiety. Metanl wellbeing is the reason of this reaserch
+                and it is important to understand that this is a complex issue that has grown 
+                really fast in the last years.""")
 
 with col2:
     mh = open("assets/maps/world_mh_real.html").read()
@@ -208,14 +211,18 @@ with col1:
     st.components.v1.html(gym, height=350)
 
 with col2:
-    st.markdown("Physical activity plays a key role in emotional resilience. This map highlights differences in exercise habits.")
+    st.markdown("""Physical activity plays a key role in emotional resilience. 
+                This map highlights differences in exercise habits. In the Gym section we can see futher on why is it 
+                that physical activity is so important for mental health.""")
 
 st.markdown('<div class="section-header">Social Media Usage</div>', unsafe_allow_html=True)
 
 col1, col2 = st.columns([1,1])
 
 with col1:
-    st.markdown("Social media influences mental wellbeing in complex ways — through connection, comparison, and screen habits.")
+    st.markdown("""Social media influences mental wellbeing in complex ways — through connection, 
+                comparison, and screen habits. This map visualizes global patterns of social media engagement.
+                In the Social Media section we will explore more in depth the relationship between social media and mental health.""")
 
 with col2:
     sm = open("assets/maps/world_social.html").read()
