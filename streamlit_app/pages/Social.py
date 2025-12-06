@@ -76,12 +76,21 @@ st.image("assets/images/social_corr.png", use_container_width=True)
 
 st.markdown('<div class="section-header">Daily Screen Time</div>', unsafe_allow_html=True)
 
+st.markdown("""
+    Though we may not see much in the correlation heatmap, there are clear relationships between daily screen time and wellbeing measures.
+    These may not be much in magnitude, but they are consistent across stress, attention, and emotional balance. These cna be silent killers of wellbeing
+    because now a days screens are everywhere and we may not even realize how much time we spend on them. We will explore more specific digital behaviors below.
+""")
+
 col1, col2 = st.columns([1,1])
 with col1:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Daily hours spent on social media can strongly influence stress, attention, and emotional balance.
+        As we saw before, daily hours spent on social media can strongly influence stress, attention, and emotional balance.
+        Blue light exposure and constant notifications can lead to cognitive overload, making it harder to focus and manage stress.
+        In addition, excessive screen time can disrupt sleep patterns, further exacerbating mental health issues. It is not just about
+        being in social media, but how much time we spend looking at screens without even realizing.
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -98,7 +107,10 @@ with col2:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Different platforms encourage different digital behaviors, which can influence wellbeing differently.
+        Now diving a little deeper into specific platforms, we can see that not all social media are created equal. Some platforms
+        may foster more positive interactions, while others may contribute to negative social comparisons or cyberbullying. 
+        Either way, platform creators should be aware of these differences and strive to create healthier online environments.
+        Now a days platform can be very harmfull to people because it create false expectations and unrealistic standards.
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -111,12 +123,29 @@ with col1:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Sleep disruption is one of the most consistent consequences of excessive screen time.
+        Sleep quality is crucial for mental health. It is the motor of our wellbeing. Excessive screen time, especially before bedtime,
+        can interfere with sleep patterns. The blue light emitted by screens can suppress melatonin production, making it harder to fall asleep.
+        Sleep disruption is one of the most consistent consequences of excessive screen time. Poor sleep can be the begining of a path to a 
+        worse mental health and can lead to increased stress, reduced attention, and emotional instability.
         </div>
     </div>
     """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/social_sleep_scatter.png", use_container_width=True)
+
+st.markdown('<div class="section-header">Key Takeaways</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="card">
+    <ul style="margin-left: -10px;">
+        <li>Daily screen time, even in small amounts, consistently relates to stress, attention difficulties, and emotional imbalance.</li>
+        <li>Different platforms have different psychological impacts—some foster connection, while others amplify comparison or negativity.</li>
+        <li>Excessive screen exposure, especially before sleep, disrupts rest patterns and contributes to long-term wellbeing decline.</li>
+        <li>Digital habits influence mental health not only through content, but through constant stimulation and reduced downtime.</li>
+        <li>Building healthier technology routines can significantly improve emotional stability, focus, and overall mental wellbeing.</li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
 
 navigation_buttons(
     back_link="pages/Music.py", back_label="← Back to Music"
