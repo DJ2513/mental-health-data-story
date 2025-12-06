@@ -89,7 +89,7 @@ f"""
             <h1>Global Mental Health Insights</h1>
             <p>A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
-        <img src="data:image/png;base64,{people_png}" style="width:200px;" />
+        <img src="data:image/png;base64,{people_png}" />
     </div>
 </div>
 """,
