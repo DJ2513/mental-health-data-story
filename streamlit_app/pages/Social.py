@@ -73,14 +73,13 @@ It serves as a high-level view of how digital behavior aligns with mental health
 """)
 st.image("assets/images/social_corr.png", use_container_width=True)
 
-
-st.markdown('<div class="section-header">Daily Screen Time</div>', unsafe_allow_html=True)
-
 st.markdown("""
     Though we may not see much in the correlation heatmap, there are clear relationships between daily screen time and wellbeing measures.
     These may not be much in magnitude, but they are consistent across stress, attention, and emotional balance. These cna be silent killers of wellbeing
     because now a days screens are everywhere and we may not even realize how much time we spend on them. We will explore more specific digital behaviors below.
 """)
+
+st.markdown('<div class="section-header">Daily Screen Time</div>', unsafe_allow_html=True)
 
 col1, col2 = st.columns([1,1])
 with col1:
