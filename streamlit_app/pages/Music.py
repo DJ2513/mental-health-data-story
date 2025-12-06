@@ -123,7 +123,9 @@ with col1:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        This chart explores the connection between depression indicators and overall mental health scores.
+        This chart explores the connection between depression indicators and overall mental health scores. 
+        And it is interesting to see how depression levels can influence music-listening habits and emotional wellbeing.
+        The higher the depression score, the worse the mental health score tends to be. 
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -134,16 +136,17 @@ st.markdown('<div class="section-header">Anxiety Indicators</div>', unsafe_allow
 
 col1, col2 = st.columns([1,1])
 with col1:
+    st.image("assets/images/music_anxiety_scatter.png", use_container_width=True)
+with col2:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Anxiety can deeply influence how and why people listen to music.  
-        This visualization explores how anxiety levels relate to overall mental health.
+        Anxiety can deeply influence how and why people listen to music. It mostly plays a role in a escape mechanism.  
+        People with higher anxiety levels may use music to manage stress or distract from anxious thoughts. And we can 
+        see that reflected in the mental health scores. This visualization explores how anxiety levels relate to overall mental health.
         </div>
     </div>
     """, unsafe_allow_html=True)
-with col2:
-    st.image("assets/images/music_anxiety_scatter.png", use_container_width=True)
 
 st.markdown('<div class="section-header">Insomnia Indicators</div>', unsafe_allow_html=True)
 
@@ -152,7 +155,8 @@ with col1:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Sleep difficulties often drive people to use music as a calming tool.  
+        Sleep difficulties often drive people to use music as a calming tool. Music can help with relaxation and falling asleep.
+        However, poor sleep can also exacerbate emotional distress. So there is a bidirectional relationship between insomnia and mental health.
         This chart shows how insomnia scores correlate with mental wellbeing.
         </div>
     </div>
