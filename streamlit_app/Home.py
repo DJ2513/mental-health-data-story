@@ -104,7 +104,8 @@ p, div, span, li {
 """, unsafe_allow_html=True)
 
 
-st.markdown(f"""
+st.markdown(
+    f"""
 <div class="hero" style="
     display: flex;
     justify-content: space-between;
@@ -125,7 +126,9 @@ st.markdown(f"""
          style="width:200px; border-radius:12px;" />
 
 </div>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True
+)
 
 
 st.markdown("""
