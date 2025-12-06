@@ -52,7 +52,7 @@ p, li, span {
 
 .hero-left {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
@@ -60,19 +60,6 @@ p, li, span {
 .hero-left-text {
     display: flex;
     flex-direction: column;
-}
-
-.hero-left-text h1 {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-size: 2.2rem;
-}
-
-.hero-left-text p {
-    margin: 0;
-    padding: 0;
-    color: white;
 }
 
 .card {
@@ -99,8 +86,8 @@ f"""
     <div class="hero-flex">
         <div class="hero-left">
             <img src="data:image/png;base64,{mental_png}" style="width:150px;" />
-                <h1>Global Mental Health Insights</h1>
-                <p>A multi-dataset exploration of modern wellbeing across the world.</p>
+            <h1>Global Mental Health Insights</h1>
+            <p>A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
         <img src="data:image/png;base64,{people_png}" style="width:200px;" />
     </div>
