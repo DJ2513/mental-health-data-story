@@ -165,6 +165,7 @@ with col2:
     smooth_rates = np.interp(smooth_years, years, rates)
 
     fig = go.Figure()
+
     fig.add_trace(go.Scatter(
         x=smooth_years, y=smooth_rates,
         mode="lines",
@@ -172,6 +173,7 @@ with col2:
         fill="tozeroy",
         fillcolor="rgba(0, 91, 187, 0.1)"
     ))
+
     fig.update_layout(
         title="Global Depressive Disorder Burden",
         xaxis=dict(title="Year"),
