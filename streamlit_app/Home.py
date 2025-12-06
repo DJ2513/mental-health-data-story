@@ -5,6 +5,8 @@ import plotly.graph_objects as go
 from pathlib import Path
 import base64
 
+from helpers import navigation_buttons
+
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
 # PNG loader for consistent display
@@ -339,10 +341,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-col1, col2 = st.columns([1,1])
-
-with col1:
-    st.markdown("")  # no back button on Home
-
-with col2:
-    st.page_link("pages/Gym.py", label="Next: Gym Activity →")
+navigation_buttons(
+    next_link="pages/Gym.py",
+    next_label="Next: Gym Activity →"
+)

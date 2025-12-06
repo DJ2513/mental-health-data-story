@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 
+from helpers import navigation_buttons
+
 st.markdown("""
 <style>
 
@@ -116,10 +118,7 @@ with col1:
 with col2:
     st.image("assets/images/music_depression_scatter.png", use_container_width=True)
 
-col1, col2 = st.columns([1,1])
-
-with col1:
-    st.page_link("pages/Gym.py", label="← Back to Gym Activity")
-
-with col2:
-    st.page_link("pages/Social.py", label="Next: Social Media →")
+navigation_buttons(
+    back_link="pages/Gym.py", back_label="← Back to Gym Activity",
+    next_link="pages/Social.py", next_label="Next: Social Media →"
+)
