@@ -31,7 +31,7 @@ p, li {
 .hero {
     padding: 60px 40px;
     border-radius: 30px;
-    background-color: #607aa2;
+    background-color: #eab676;
     color: white !important;
     margin-bottom: 50px;
 }
@@ -53,72 +53,74 @@ p, li {
 
 st.markdown("""
 <div class="hero">
-    <h1>Music and Mental Health</h1>
+    <h1>Gym Activity and Mental Health</h1>
     <p>
-    Music is a powerful emotional regulator. It shapes mood, reduces stress, and can both reflect and influence 
-    psychological states. This section explores how listening habits connect to mental wellbeing.
+    Physical activity is strongly linked to positive mental wellbeing.  
+    This page explores how gym habits relate to stress levels, mood, and overall mental health.
     </p>
 </div>
 """, unsafe_allow_html=True)
 
 
-music = pd.read_csv("assets/data/music.csv")
+gym = pd.read_csv("assets/data/gym.csv")
 
 
-st.markdown('<div class="section-header">Relationships Between Music Habits and Mental Wellbeing</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">Gym Frequency and Mental Health</div>', unsafe_allow_html=True)
 
 st.markdown("""
-The correlation heatmap provides an overview of how music habits — such as listening duration, genre preference, 
-and emotional conditions — align with mental health scores.
+Regular exercise is known to reduce stress and boost mood.  
+This chart examines how often participants go to the gym and how that aligns with mental wellbeing.
 """)
-st.image("assets/images/music_corr.png", use_container_width=True)
+
+st.image("assets/images/gym_frequency.png", use_container_width=True)
 
 
-st.markdown('<div class="section-header">Genre Preference and Emotional Wellbeing</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">Workout Duration and Mood</div>', unsafe_allow_html=True)
 
+col1, col2 = st.columns([1,1])
+with col1:
+    st.image("assets/images/gym_duration.png", use_container_width=True)
+with col2:
+    st.markdown("""
+    <div style="display: flex; align-items: center; height: 100%; min-height: 240px;">
+        <div>
+        Longer workouts may provide emotional regulation benefits  
+        and serve as coping strategies for stress or anxiety.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+st.markdown('<div class="section-header">Intensity Levels</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    <div style="display: flex; align-items: center; height: 100%; min-height: 240px;">
+        <div>
+        Workout intensity can reflect personal goals, energy levels,  
+        or attempts to manage emotional states.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.image("assets/images/gym_intensity.png", use_container_width=True)
+
+st.markdown('<div class="section-header">Key Takeaways</div>', unsafe_allow_html=True)
 
 st.markdown("""
-<div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-    <div>
-    Different genres evoke different emotional responses.  
-    This visualization examines how mental health scores vary across preferred genres.
-    </div>
+<div class="card">
+    <ul style="margin-left: -10px;">
+        <li>Regular gym activity is strongly associated with higher mental wellbeing scores.</li>
+        <li>Longer or more intense workouts may serve as coping mechanisms for stress or low mood.</li>
+        <li>Those who exercise more consistently tend to show lower depressive indicators.</li>
+        <li>Physical activity is not just fitness — it's emotional regulation, routine, and resilience.</li>
+    </ul>
 </div>
 """, unsafe_allow_html=True)
 
-st.image("assets/images/music_box_favgenre.png", use_container_width=True)
-
-
-st.markdown('<div class="section-header">Daily Listening Time</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.image("assets/images/music_scatter_hours.png", use_container_width=True)
-with col2:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        Listening for long periods may reflect emotional needs, coping strategies, or deep engagement.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-
-st.markdown('<div class="section-header">Depression Indicators</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        This chart explores the connection between depression indicators and overall mental health scores.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-with col2:
-    st.image("assets/images/music_depression_scatter.png", use_container_width=True)
 
 navigation_buttons(
-    back_link="pages/Gym.py", back_label="← Back to Gym Activity",
-    next_link="pages/Social.py", next_label="Next: Social Media →"
+    back_link="Home.py", back_label="← Back to Home",
+    next_link="pages/Music.py", next_label="Next: Music →"
 )
