@@ -340,8 +340,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 col1, col2 = st.columns([1,1])
+
 with col1:
-    st.markdown("")  # intentionally left empty
+    st.markdown("")  # no back button on Home
+
 with col2:
-    st.markdown("<div style='text-align:right;'>", unsafe_allow_html=True)
     st.page_link("pages/Gym.py", label="Next: Gym Activity →")

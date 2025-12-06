@@ -117,9 +117,9 @@ with col2:
     st.image("assets/images/music_depression_scatter.png", use_container_width=True)
 
 col1, col2 = st.columns([1,1])
+
 with col1:
     st.page_link("pages/Gym.py", label="← Back to Gym Activity")
 
 with col2:
-    st.markdown("<div style='text-align:right;'>", unsafe_allow_html=True)
     st.page_link("pages/Social.py", label="Next: Social Media →")

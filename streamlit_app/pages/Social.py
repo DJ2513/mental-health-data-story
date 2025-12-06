@@ -117,8 +117,9 @@ with col2:
     st.image("assets/images/social_sleep_scatter.png", use_container_width=True)
 
 col1, col2 = st.columns([1,1])
+
 with col1:
     st.page_link("pages/Music.py", label="← Back to Music")
 
 with col2:
-    st.markdown("")  # intentionally left empty
+    st.markdown("")  # no next page

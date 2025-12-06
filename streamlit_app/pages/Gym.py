@@ -120,9 +120,9 @@ with col2:
     st.image("assets/images/gym_duration_calories_scatter.png", use_container_width=True)
 
 col1, col2 = st.columns([1,1])
+
 with col1:
     st.page_link("Home.py", label="← Back to Home")
 
 with col2:
-    st.markdown("<div style='text-align:right;'>", unsafe_allow_html=True)
     st.page_link("pages/Music.py", label="Next: Music →")
