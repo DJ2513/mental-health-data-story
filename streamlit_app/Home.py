@@ -2,36 +2,18 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
-from pathlib import Path
 import base64
 
 from helpers import navigation_buttons
 
 st.set_page_config(page_title="Mental Health Story", layout="wide")
 
-# PNG loader for consistent display
 def png_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
 mental_png = png_to_base64("streamlit_app/assets/mental_health.png")
 people_png = png_to_base64("streamlit_app/assets/people.png")
-
-st.markdown(f"""
-    <div style="
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        width: 100%;
-    ">
-        <img src="data:image/png;base64,{mental_png}" width="420" />
-        <img src="data:image/png;base64,{people_png}" width="420" />
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
 
 st.markdown("""
 <style>
@@ -122,10 +104,28 @@ p, div, span, li {
 """, unsafe_allow_html=True)
 
 
-st.markdown("""
-<div class="hero">
-    <h1>Global Mental Health Insights</h1>
-    <p>A multi-dataset exploration of modern wellbeing across the world.</p>
+st.markdown(f"""
+<div class="hero" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+">
+
+    <!-- LEFT SIDE: logo + title -->
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <img src="data:image/png;base64,{mental_png}" 
+             style="width:160px; border-radius:12px;" />
+        <div>
+            <h1 style="margin-bottom: 8px;">Global Mental Health Insights</h1>
+            <p style="margin-top: 0;">A multi-dataset exploration of modern wellbeing across the world.</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: people PNG -->
+    <img src="data:image/png;base64,{people_png}" 
+         style="width:200px; border-radius:12px;" />
+
 </div>
 """, unsafe_allow_html=True)
 
