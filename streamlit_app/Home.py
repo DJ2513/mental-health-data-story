@@ -342,6 +342,5 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 navigation_buttons(
-    next_link="pages/Gym.py",
-    next_label="Next: Gym Activity →"
+    next_link="pages/Gym.py", next_label="Next: Gym Activity →"
 )
