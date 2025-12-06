@@ -16,25 +16,21 @@ people_png = png_to_base64("streamlit_app/assets/people.png")
 
 st.markdown(
     f"""
-<div class="hero" style="
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-">
+<div class="hero">
+
     <div style="display: flex; align-items: center; gap: 20px;">
         <img src="data:image/png;base64,{mental_png}" 
-             style="width:160px; border-radius:12px;" />
+             style="width:150px;" />
         <div>
-            <h1 style="margin-bottom: 8px;">Global Mental Health Insights</h1>
+            <h1 style="margin-bottom: 6px;">Global Mental Health Insights</h1>
             <p style="margin-top: 0;">A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
     </div>
 
     <img src="data:image/png;base64,{people_png}" 
-         style="width:200px; border-radius:12px;" />
+         style="width:180px;" />
 </div>
-    """,
+""",
     unsafe_allow_html=True
 )
 
