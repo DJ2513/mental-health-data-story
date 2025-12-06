@@ -138,6 +138,19 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
+st.markdown('<div class="section-header">Key Takeaways</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="card">
+    <ul style="margin-left: -10px;">
+        <li>Regular gym activity is strongly associated with higher mental wellbeing scores.</li>
+        <li>Longer or more intense workouts may serve as coping mechanisms for stress or low mood.</li>
+        <li>Those who exercise more consistently tend to show lower depressive indicators.</li>
+        <li>Physical activity is not just fitness — it's emotional regulation, routine, and resilience.</li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
+
 navigation_buttons(
     back_link="Home.py", back_label="← Back to Home",
     next_link="pages/Music.py", next_label="Next: Music →"
