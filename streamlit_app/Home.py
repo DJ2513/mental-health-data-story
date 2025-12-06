@@ -81,7 +81,7 @@ p, li, span {
 
 st.markdown(
 f"""
-<div style="display:flex; align-items:center; text-align:center;">
+<div style="display:flex;">
 <div class="hero">
     <div class="hero-flex">
         <div class="hero-left">
