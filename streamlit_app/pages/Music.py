@@ -55,8 +55,10 @@ st.markdown("""
 <div class="hero">
     <h1>Music and Mental Health</h1>
     <p>
-    Music is a powerful emotional regulator. It shapes mood, reduces stress, and can both reflect and influence 
-    psychological states. This section explores how listening habits connect to mental wellbeing.
+    Music is everything for a large amount of peolpe in the world. It is a powerful emotional regulator. It shapes mood, 
+    reduces stress, and can both reflect and influence psychological states. It has been proven that music can potencialize how you are feeling,
+    and can be used as a therapeutic tool for mental health conditions. So it can be either a positive or negative influence depending on the context.
+    This section explores how listening habits connect to mental wellbeing.
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -73,14 +75,21 @@ and emotional conditions — align with mental health scores.
 """)
 st.image("assets/images/music_corr.png", use_container_width=True)
 
+st.markdown("""
+We can see that there are some interesting correlations:
+- **Preferred Genre and Mental Health**: A moderate positive correlation (0.35) suggests that certain genres may be linked to a bad mental health depending on the genre.
+- **Listening Duration and Mental Health**: A slight negative correlation (-0.22) indicates that longer listening times might be associated with better mental.
+We can also see that the mental conditions are strongly related to the mental health score, which is expected since they are part of the calculation of the score. 
+""")
+
 
 st.markdown('<div class="section-header">Genre Preference and Emotional Wellbeing</div>', unsafe_allow_html=True)
-
 
 st.markdown("""
 <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
     <div>
-    Different genres evoke different emotional responses.  
+    As proven in the heatmap, depending on the genre you listen it can actively help or worsen your situation.
+    Different genres evoke different emotional responses. But it can be seen that there are better genres to listen for your mental health.
     This visualization examines how mental health scores vary across preferred genres.
     </div>
 </div>
@@ -98,7 +107,10 @@ with col2:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
+        Now listening time can have different meanings. It depends on the context of why you are listening to music. 
+        It can be a way to escape reality, to enhance focus, or simply for enjoyment.
         Listening for long periods may reflect emotional needs, coping strategies, or deep engagement.
+        This scatter plot explores how daily listening time relates to mental health scores.
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -117,6 +129,50 @@ with col1:
     """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/music_depression_scatter.png", use_container_width=True)
+
+st.markdown('<div class="section-header">Anxiety Indicators</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Anxiety can deeply influence how and why people listen to music.  
+        This visualization explores how anxiety levels relate to overall mental health.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.image("assets/images/music_anxiety_scatter.png", use_container_width=True)
+
+st.markdown('<div class="section-header">Insomnia Indicators</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Sleep difficulties often drive people to use music as a calming tool.  
+        This chart shows how insomnia scores correlate with mental wellbeing.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.image("assets/images/music_insomnia_scatter.png", use_container_width=True)
+
+st.markdown('<div class="section-header">Key Takeaways</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="card">
+    <ul style="margin-left: -10px;">
+        <li>Music can strongly influence emotional states—both positively and negatively—depending on context and genre.</li>
+        <li>Longer listening times may indicate coping behaviors, emotional regulation needs, or deep engagement.</li>
+        <li>Depression, anxiety, and insomnia indicators all show meaningful relationships with music-listening habits.</li>
+        <li>Certain genres appear to align with healthier mental wellbeing patterns, while others may correlate with emotional distress.</li>
+        <li>Overall, music is a powerful psychological tool—and understanding listening habits can give valuable insight into mental health.</li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
 
 navigation_buttons(
     back_link="pages/Gym.py", back_label="← Back to Gym Activity",
