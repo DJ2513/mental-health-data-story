@@ -81,6 +81,7 @@ p, li, span {
 
 st.markdown(
 f"""
+
 <div class="hero">
     <div class="hero-flex">
         <div class="hero-left">
@@ -88,8 +89,8 @@ f"""
             <h1>Global Mental Health Insights</h1>
             <p>A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
-        <img src="data:image/png;base64,{people_png}" style="width:400px;" />
     </div>
+    <img src="data:image/png;base64,{people_png}" style="width:400px;" />
 </div>
 """,
 unsafe_allow_html=True
