@@ -90,8 +90,8 @@ f"""
             <p>A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
     </div>
-    <img src="data:image/png;base64,{people_png}" style="width:400px;" />
 </div>
+<img src="data:image/png;base64,{people_png}" style="width:400px;" />
 """,
 unsafe_allow_html=True
 )
