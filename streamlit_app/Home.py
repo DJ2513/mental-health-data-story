@@ -84,7 +84,7 @@ f"""
 <div class="hero">
     <div class="hero-flex">
         <div class="hero-left">
-            <img src="data:image/png;base64,{mental_png}" style="width:400px;" />
+            <img src="data:image/png;base64,{mental_png}" style="width:250px;" />
             <h1>Global Mental Health Insights</h1>
             <p>A multi-dataset exploration of modern wellbeing across the world.</p>
         </div>
