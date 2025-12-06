@@ -73,6 +73,18 @@ with st.container():
 
     st.image("assets/images/gym_corr.png", use_container_width=True)
 
+st.markdown("""
+        If you watch closely the heatmap above can tell you a lot of things about how exercise
+        impacts mental health. First, we can see that there is a strong negative correlation between
+        the mental health score and the number of work outs per week (-0.45). This suggests that people
+        who work out more frequently tend to have better mental health. Second, we can see that there is
+        a moderate negative correlation between the mental health score and the average duration of 
+        work outs (-0.30). This suggests that longer work outs may also contribute to better mental health.
+        Finally, we can see that there is a weak negative correlation between the mental health score and the 
+        average calories burned per session (-0.15). This suggests that while exercise intensity may have some impact
+        on mental health, it is not as significant as frequency and duration.
+        """)
+
 
 st.markdown('<div class="section-header">Workout Frequency & Emotional Wellbeing</div>', unsafe_allow_html=True)
 
@@ -81,13 +93,31 @@ with col1:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Working out more consistently often leads to better emotional balance and lower levels of stress.  
+        With the heatmap shown before we can now show the realtions between Workout Frequency and Mental Health Score.
+        Working out more consistently often leads to better emotional balance and lower levels of stress as said in the heatmap.  
         This visualization examines how the number of weekly workouts correlates with mental health scores.
         </div>
     </div>
     """, unsafe_allow_html=True)
 with col2:
     st.image("assets/images/gym_freq_scatter.png", use_container_width=True)
+
+st.markdown('<div class="section-header">How Long You Work Out Matters</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    st.markdown("""
+    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
+        <div>
+        Now we can explore the relationship between Workout Duration and Mental Health Score.
+        Session duration helps us understand how sustained effort contributes to total energy expenditure.
+        Doing hard things such as working out for longer periods of time can build mental toughness.  
+        So this means that longer sessions can correlate with deeper mental health benefits.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.image("assets/images/gym_duration_calories_scatter.png", use_container_width=True)
 
 
 st.markdown('<div class="section-header">Exercise Intensity & Mood</div>', unsafe_allow_html=True)
@@ -99,27 +129,14 @@ with col2:
     st.markdown("""
     <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
         <div>
-        Calories burned represent workout intensity, which can influence neurotransmitter release  
-        such as endorphins, dopamine, and serotonin.
+        Finally we can look into the relationship between Calories Burned and Mental Health Score.  
+        While not as strong as frequency or duration, exercise intensity still plays a role in mental wellbeing.
+        Calories burned represent workout intensity, which can influence neurotransmitter release  such as endorphins, dopamine, and serotonin.
+        These chemicals are known to improve mood and reduce symptoms of anxiety and depression. So the Calories burned in your workouts
+        can have a positive impact on your mental health.
         </div>
     </div>
     """, unsafe_allow_html=True)
-
-
-st.markdown('<div class="section-header">How Long You Work Out Matters</div>', unsafe_allow_html=True)
-
-col1, col2 = st.columns([1,1])
-with col1:
-    st.markdown("""
-    <div style="display: flex; align-items: center; height: 100%; min-height: 260px;">
-        <div>
-        Session duration helps us understand how sustained effort contributes to total energy expenditure.  
-        Longer sessions may correlate with deeper mental health benefits.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-with col2:
-    st.image("assets/images/gym_duration_calories_scatter.png", use_container_width=True)
 
 navigation_buttons(
     back_link="Home.py", back_label="← Back to Home",
