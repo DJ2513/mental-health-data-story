@@ -91,7 +91,7 @@ f"""
         </div>
     </div>
 </div>
-<img src="data:image/png;base64,{people_png}" style="width:400px;" />
+<img src="data:image/png;base64,{people_png}" style="align-self:center;width:400px;" />
 </div>
 """,
 unsafe_allow_html=True
